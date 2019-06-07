@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Prerequisites for Debugging - Dbeaver</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Prerequisites for Debugging";
+    var mkdocs_page_input_path = "PGDebugger.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Dbeaver</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">About DBeaver</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../3rd-party-dependencies/">3rd party dependencies</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Admin-Manage-Connections/">Admin Manage Connections</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Admin-Manage-Drivers/">Admin Manage Drivers</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Apache-Hive/">Apache Hive</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Application-Window-Overview/">Application Window Overview</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Auto-Tests/">Auto Tests</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Auto-and-Manual-Commit-Modes/">Auto and Manual Commit Modes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Background-Tasks/">Background Tasks</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Bookmarks/">Bookmarks</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Build-from-sources/">Build from sources</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Cassandra/">Cassandra</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Clickhouse/">Clickhouse</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Client-Side-Scripting/">Client Side Scripting</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Command-Line/">Command line parameters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Configure-Filters/">Configure Filters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Connect-to-Database/">Connect to Database</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Connection-Types/">Connection Types</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Create-Connection/">Create Connection</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Custom-Diagrams/">Custom Diagrams</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../DB-Full-Text-Search/">DB Full Text Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../DB-Metadata-Search/">DB Metadata Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Dashboards/">Dashboards</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Editor/">Data Editor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Filter/">Data Filter</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Filters/">Data Filters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Refresh/">Data Refresh</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Search/">Data Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-View-and-Format/">Data View and Format</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Viewing-and-Editing/">Data Viewing and Editing</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-migration/">Data migration</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-transfer/">Data transfer</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data/">Data</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-Connections/">Database Connections</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-Navigator/">Database Navigator</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-Object-Editor/">Database Object Editor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-Structure-Diagrams/">Database Structure Diagrams</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-drivers/">Database drivers</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../DebugPluginInstall/">DebugPluginInstall</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Develop-in-Eclipse/">Develop in Eclipse</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Develop-in-IDEA/">Develop in IDEA</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Disconnect-from-Database/">Disconnect from Database</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../ER-Diagrams/">ER Diagrams</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Eclipse-extensions/">Eclipse extensions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Edit-Connection/">Edit Connection</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Enterprise-Edition/">Enterprise Edition</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Extension-Office/">Extension Office</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Extension-SVG-Format/">Extension SVG Format</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Features-structure/">Features structure</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../File-Search/">File Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Filter-Database-Objects/">Filter Database Objects</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../GIS-examples/">GIS examples</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Home/">About DBeaver</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Installation/">Installation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Invalidate-and-Reconnect-to-Database/">Invalidate and Reconnect to Database</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../JDBC-Time-Zones/">JDBC Time Zones</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Localization/">Localization</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Log-files/">Log files</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Making-a-thread-dump/">Making a thread dump</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Managing-Charts/">Managing Charts</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Managing-Data-Formats/">Managing Data Formats</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Mock-Data-Generation-in-DBeaver/">Mock Data Generation in DBeaver</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Navigation/">Navigation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../New-Table-creation/">New Table creation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../NoSQL-MongoDB/">NoSQL MongoDB</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Optional-extensions/">Optional extensions</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Prerequisites for Debugging</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#prerequisites-for-debugging">Prerequisites for Debugging</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#installation">Installation</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#how-to-start-debug-with-local-breakpoint">How to start debug with local breakpoint</a></li>
+    
+
+    <li class="toctree-l2"><a href="#how-to-start-debug-with-global-breakpoint">How to start debug with global breakpoint</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#running-debugger-in-dbeaver-interface">Running debugger in DBeaver interface</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Panels/">Panels</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Pending-Transactions/">Pending Transactions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Posting-issues/">Posting issues</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Project-Explorer/">Project Explorer</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Projects-View/">Projects View</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Projects/">Projects</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Properties-Editor/">Properties Editor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Query-Manager/">Query Manager</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Reset-UI-settings/">Reset UI settings</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Reset-workspace/">Reset workspace</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Assist-and-Auto-Complete/">SQL Assist and Auto Complete</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Creation-and-Editing/">SQL Creation and Editing</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Editor/">SQL Editor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Execution/">SQL Execution</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Formatting/">SQL Formatting</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Generation/">SQL Generation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Templates/">SQL Templates</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Script-Management/">Script Management</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Search/">Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Shortcuts/">Shortcuts</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Transaction-Log/">Transaction Log</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../User-Guide/">User Guide</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Views/">Views</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Visual-Query-Builder/">Visual Query Builder</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Windows-Silent-Install/">Windows Silent Install</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Work-with-XML/">Work with XML</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Working-with-XML-and-JSON/">Working with XML and JSON</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Workspace-Overview/">Workspace Overview</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../_Footer/"> Footer</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../_Sidebar/"> Sidebar</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../_Toc/"> Toc</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../about/">About</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../sqleditor/">Sqleditor</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Dbeaver</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Prerequisites for Debugging</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="prerequisites-for-debugging">Prerequisites for Debugging</h1>
+<p>In order to implement interactive debugging of PL/SQL procedures on a Postgres server you need to use plugin_debugger. Plugin_debugger is a typical interactive debugger delivered as an extension and requiring a  shared library preload in Postgres to operate the shared_preload_libraries parameter in settings. The debugger is developed and maintained by the community. Its source code is available for examination and improvement.</p>
+<p>The debugger provides the required server API for debugging PL/SQL procedures with:</p>
+<ul>
+<li>Breakpoint management;</li>
+<li>Step-by-step tracing;</li>
+<li>Variable acquisition and management.</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<p>As the first step, you need to install the <strong>plugin_debugger</strong> extension in your PostgreSQL database. It is free and open source. You can download the source code <a href="https://git.postgresql.org/gitweb/?p=pldebugger.git;a=tree">here</a>. And you can find the installation README file <a href="https://git.postgresql.org/gitweb/?p=pldebugger.git;a=blob_plain;f=README.pldebugger;hb=HEAD">here</a>.</p>
+<p>To install the debugger plugin:</p>
+<ol>
+<li>Copy this directory to <strong>contrib/</strong> in your PostgreSQL source tree.</li>
+<li>Run <strong>make; make install</strong>.</li>
+<li>Edit your <strong>postgresql.conf</strong> file and modify the <strong>shared_preload_libraries</strong> config option to look like the following: <strong>shared_preload_libraries = '$libdir/plugin_debugger'</strong>.</li>
+<li>Restart PostgreSQL for the new setting to take effect.</li>
+<li>Run the following command in the database or databases that you wish to debug functions in:<br />
+<strong>CREATE EXTENSION pldbgapi;</strong><br />
+  NOTE: On server versions older than 9.1, instead of running the command, you need to run the <strong>pldbgapi--1.0.sql</strong> script directly using psql.</li>
+</ol>
+<p>If you use binary builds from pgdg, you can use repository for your Linux distribution. For more information, please see [Official Postgres page] (https://www.postgresql.org/download/).</p>
+<p>After installing the plugin on the database server, you need to install the debug plugin from either a marketplace or P2 repository, see this <a href="https://github.com/dbeaver/dbeaver/wiki/Optional-extensions">article</a> for more information.</p>
+<p>You can find a detailed DBeaverCE Debug plugin installation guide from Jkiss P2 repository <a href="https://github.com/dbeaver/dbeaver/wiki/DebugPluginInstall">here</a>.</p>
+<h1 id="how-to-start-debug-with-local-breakpoint">How to start debug with local breakpoint</h1>
+<p>For local breakpoints, stop will be done only for server process launched by the initiator. All other processes will run procedure/function as usual. When you create or run a previously defined debugging session in DBeaver with local breakpoint, the following steps take place:
+1. DBeaver creates initiator session and local breakpoint.
+2. DBeaver runs procedure\function (with parameters specified) selected for debugging in the initiator session. 
+3. The server process reaches breakpoint and displays NOTICE to initiator, in which the PORT is reported for PLDBGBREAK:XX debugging. Then the process opens the socket and becomes blocked, waiting for PROXY connection. If Debug Client cannot get PORT name from the process being debugged, an error message appears.
+4. Debug Client creates a session, then tries to establish connection with the debugged process, using PORT from step 3 provided by the initiator. The connection is established via API call <strong>attach_to_port</strong>. If the connection cannot be established, the <strong>Error rcv port number</strong> message appears.
+5. PROXY receives PORT from the client, then establishes connection to the process, and returns the session identifier to the client. After that, using the identificator, one can:
+   * Send debugging commands to the process;
+   * Receive responses from the process;
+   * Translate responses to the client.</p>
+<p>[[/images/debug-local.png|Debug with local breakpoint]]</p>
+<h1 id="how-to-start-debug-with-global-breakpoint">How to start debug with global breakpoint</h1>
+<p>Whenever the breakpoint is global, stop will be done for any server process launched by anyone. No modifications or additional calls from the debugged process are required. When you create a session with a global breakpoint, the following steps take place:
+1. The client creates a session and then establishes a connection with PROXY (receiving session). After that, the client creates a global breakpoint  for the selected function, and then becomes blocked via the <strong>pldbg_wait_for_target</strong> API call waiting for the server process.
+2. PROXY receives the global control point from the client and adds global control point to the shared memory, if the point of this type has not been added before.
+3. The initiator creates a connection and runs the selected procedure.
+4. On each executed line, the target process checks if the global breakpoint with corresponding conditions exists, and becomes blocked if the breakpoint exists and conditions are met.
+5. The target process establishes a connection with PROXY and reports that the breakpoint is reached.
+6. Afterwards, the process becomes blocked and waits for PROXY (client) commands. The process will be implementing commands unless the procedure finishes or an exception is thrown. </p>
+<p>[[/images/debug-global.png|Debug with global breakpoint]]</p>
+<h2 id="running-debugger-in-dbeaver-interface">Running debugger in DBeaver interface</h2>
+<p>If you have successfully installed the debugger plugin, and the plugin is up and running, you can start Debug from procedure source page by right-clicking the procedure source text - a context menu appears:</p>
+<p>[[/images/start-debug.PNG|Debug popup menu]]</p>
+<p>You need to choose the type of your debug session: Local or Global.</p>
+<p>For a <strong>Global</strong> session, you need to specify the target process PID filter (enter <strong>-1</strong> value for any process): 
+[[/images/start-debug-global.PNG|Debug global dialog]]</p>
+<p>After running a Global session, you need to wait for any (or specified PID) process to call your procedure.</p>
+<p>For a <strong>Local</strong> session, you need to specify the executable SQL sentence for starting the target process: 
+[[/images/start-debug-local.PNG|Debug local dialog]]</p>
+<p>In the script editor window, you can see the <strong>select get_count(?)</strong> text that is just a specification of how DBeaver must call your function(procedure) for debug. </p>
+<p>DBeaver is not intended to know about the values of the variables in the procedure being debugged. You need to set the values for call arguments BEFORE you start debugging. 
+Your settings might look as follows:<br />
+[[/images/start-debug-local-params.png|Debug local dialog]]</p>
+<p>If you run debugging now, DBeaver creates a separate connection to the database server, tries to execute the given SQL sentence <strong>select get_count(‘pg_class’)</strong> in this connection, and attaches the debug session to the running SQL context.</p>
+<p>After successfully attaching to the target server process, the platform prompts you to switch to the debug perspective:</p>
+<p>[[/images/debug-perspective.PNG|Debug perspective switch]]</p>
+<p>After you click <strong>OK</strong>, the debug toolset (perspective) opens:</p>
+<p>[[/images/debug-perspective-win.png|Debug perspective]]</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Panels/" class="btn btn-neutral float-right" title="Panels">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Optional-extensions/" class="btn btn-neutral" title="Optional extensions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Optional-extensions/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Panels/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

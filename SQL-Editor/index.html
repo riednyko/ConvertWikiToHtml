@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>SQL Editor - Dbeaver</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "SQL Editor";
+    var mkdocs_page_input_path = "SQL-Editor.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Dbeaver</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">About DBeaver</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../3rd-party-dependencies/">3rd party dependencies</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Admin-Manage-Connections/">Admin Manage Connections</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Admin-Manage-Drivers/">Admin Manage Drivers</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Apache-Hive/">Apache Hive</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Application-Window-Overview/">Application Window Overview</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Auto-Tests/">Auto Tests</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Auto-and-Manual-Commit-Modes/">Auto and Manual Commit Modes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Background-Tasks/">Background Tasks</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Bookmarks/">Bookmarks</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Build-from-sources/">Build from sources</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Cassandra/">Cassandra</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Clickhouse/">Clickhouse</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Client-Side-Scripting/">Client Side Scripting</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Command-Line/">Command line parameters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Configure-Filters/">Configure Filters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Connect-to-Database/">Connect to Database</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Connection-Types/">Connection Types</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Create-Connection/">Create Connection</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Custom-Diagrams/">Custom Diagrams</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../DB-Full-Text-Search/">DB Full Text Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../DB-Metadata-Search/">DB Metadata Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Dashboards/">Dashboards</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Editor/">Data Editor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Filter/">Data Filter</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Filters/">Data Filters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Refresh/">Data Refresh</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Search/">Data Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-View-and-Format/">Data View and Format</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Viewing-and-Editing/">Data Viewing and Editing</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-migration/">Data migration</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-transfer/">Data transfer</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data/">Data</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-Connections/">Database Connections</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-Navigator/">Database Navigator</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-Object-Editor/">Database Object Editor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-Structure-Diagrams/">Database Structure Diagrams</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-drivers/">Database drivers</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../DebugPluginInstall/">DebugPluginInstall</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Develop-in-Eclipse/">Develop in Eclipse</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Develop-in-IDEA/">Develop in IDEA</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Disconnect-from-Database/">Disconnect from Database</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../ER-Diagrams/">ER Diagrams</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Eclipse-extensions/">Eclipse extensions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Edit-Connection/">Edit Connection</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Enterprise-Edition/">Enterprise Edition</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Extension-Office/">Extension Office</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Extension-SVG-Format/">Extension SVG Format</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Features-structure/">Features structure</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../File-Search/">File Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Filter-Database-Objects/">Filter Database Objects</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../GIS-examples/">GIS examples</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Home/">About DBeaver</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Installation/">Installation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Invalidate-and-Reconnect-to-Database/">Invalidate and Reconnect to Database</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../JDBC-Time-Zones/">JDBC Time Zones</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Localization/">Localization</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Log-files/">Log files</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Making-a-thread-dump/">Making a thread dump</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Managing-Charts/">Managing Charts</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Managing-Data-Formats/">Managing Data Formats</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Mock-Data-Generation-in-DBeaver/">Mock Data Generation in DBeaver</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Navigation/">Navigation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../New-Table-creation/">New Table creation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../NoSQL-MongoDB/">NoSQL MongoDB</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Optional-extensions/">Optional extensions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../PGDebugger/">Prerequisites for Debugging</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Panels/">Panels</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Pending-Transactions/">Pending Transactions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Posting-issues/">Posting issues</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Project-Explorer/">Project Explorer</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Projects-View/">Projects View</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Projects/">Projects</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Properties-Editor/">Properties Editor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Query-Manager/">Query Manager</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Reset-UI-settings/">Reset UI settings</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Reset-workspace/">Reset workspace</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Assist-and-Auto-Complete/">SQL Assist and Auto Complete</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Creation-and-Editing/">SQL Creation and Editing</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">SQL Editor</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#results-panel">Results Panel</a></li>
+    
+
+    <li class="toctree-l2"><a href="#layout-adjustment">Layout Adjustment</a></li>
+    
+
+    <li class="toctree-l2"><a href="#hyperlinks">Hyperlinks</a></li>
+    
+
+    <li class="toctree-l2"><a href="#active-databaseschema-selection">Active Database/Schema Selection</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Execution/">SQL Execution</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Formatting/">SQL Formatting</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Generation/">SQL Generation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Templates/">SQL Templates</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Script-Management/">Script Management</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Search/">Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Shortcuts/">Shortcuts</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Transaction-Log/">Transaction Log</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../User-Guide/">User Guide</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Views/">Views</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Visual-Query-Builder/">Visual Query Builder</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Windows-Silent-Install/">Windows Silent Install</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Work-with-XML/">Work with XML</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Working-with-XML-and-JSON/">Working with XML and JSON</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Workspace-Overview/">Workspace Overview</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../_Footer/"> Footer</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../_Sidebar/"> Sidebar</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../_Toc/"> Toc</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../about/">About</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../sqleditor/">Sqleditor</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Dbeaver</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>SQL Editor</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>You can create multiple SQL scripts for a single connection. Every script opens in its own SQL editor. 
+To open an SQL editor for some connection:
+* Click this connection in the <a href="https://github.com/dbeaver/dbeaver/wiki/Database-Navigator">Database Navigator</a> view and press <kbd>F3</kbd> or click <strong>SQL Editor -&gt; SQL Editor</strong> on the main menu. Alternatively, you click <strong>SQL Editor</strong> on the context menu of this connection. DBeaver opens the Choose SQL script editor with saved SQL scripts linked to this connection. CLick the SQL script to open it in a separate tab.
+* Click <strong>Recent SQL Editor</strong> on the context menu for this connection or on the main menu (<strong>SQL Editor -&gt; Recent SQL Editor</strong>). This opens the latest used SQL editor. You can also open the most recent SQL editor using <kbd>Ctrl+Enter</kbd> shortcut in the Database Navigator view.
+* If you need to create a new SQL script, on the main menu, click <strong>SQL Editor -&gt; New SQL Editor</strong> or press <kbd>F3</kbd> and then click <strong>New Script</strong> in the Choose SQL Script window.</p>
+<p>DBeaver uses SQL syntax highlighting which depends on the database associated with the script. Different databases have different sets of reserved keywords and system functions.</p>
+<p>NOTE: SQL Editor for a connection is different from SQL console for a table or view (right-click the table and click <strong>Read data in SQL console</strong>) in that, unlike the console, it can save scripts and changes to them.</p>
+<p>You can see all your saved SQL scripts in the <a href="https://github.com/dbeaver/dbeaver/wiki/Project-Explorer">Project Explorer</a> view in the <strong>Scripts</strong> folder.</p>
+<p>The SQL editor includes the script panel at the top and results panel at the bottom:</p>
+<p><img alt="" src="../images/ug/SQL-Editor.png" /></p>
+<p>You can open SQL editor preferences by pressing <kbd>Alt+Enter</kbd>.</p>
+<h2 id="results-panel">Results Panel</h2>
+<p>The results panel displays tabs with results in various formats. The tabs resulting from script execution represent instances of the <a href="https://github.com/dbeaver/dbeaver/wiki/Data-Editor">Data Editor</a>. You can create, edit and execute SQL scripts in the script panel and then see the results in the result tabs.</p>
+<p>The results panel provides <strong>Output</strong> and <strong>Log</strong> views of results.<br />
+The execution <strong>Log</strong> tab contains all queries executed in the current SQL editor:</p>
+<p><img alt="" src="../images/ug/SEL-Editor-Exec-Log.png" /></p>
+<p>The <strong>Output</strong> tab contains all server-side database messages/warnings generated by a database when you execute queries. This feature is supported only by a few database engines (Oracle, SQL Server and some other ones). </p>
+<h2 id="layout-adjustment">Layout Adjustment</h2>
+<p>You can modify the layout of the SQL Editor by showing/hiding the results panel and changing the horizontal/vertical position of the panes.
+* To toggle (hide/show) the results panel, press <kbd>CTRL+6</kbd> or right-click anywhere in the script pane and, on the context menu, click <strong>Layout -&gt; Toggle results panel</strong>.
+* To maximize the results panel, press <kbd>CTRL+Shift+6</kbd>, or double-click the results tab name, or right-click anywhere in the script panel and, on the context menu, click <strong>Layout -&gt; Maximize results panel</strong>.
+* To switch between the script panel and the results pane, press <kbd>Alt+6</kbd> or right-click anywhere in the script panel and, on the context menu, click <strong>Layout -&gt; Switch active panel</strong>.</p>
+<p>To position both panels horizontally, right-click anywhere in the script panel and, on the context menu, click <strong>Layout -&gt; Horizontal</strong>.<br />
+To position both panels vertically, right-click anywhere in the script panel and, on the context menu, click <strong>Layout -&gt; Vertical</strong>.</p>
+<h2 id="hyperlinks">Hyperlinks</h2>
+<p>You can press and hold <kbd>Ctrl</kbd> and at the same time move the mouse over SQL text. If DBeaver recognizes some identifier as a table/view name, it presents it as a hyperlink. You can click the hyperlink to open this object`s editor:</p>
+<p><img alt="" src="../images/ug/SQL-Editor-hyperlink.png" />  </p>
+<h2 id="active-databaseschema-selection">Active Database/Schema Selection</h2>
+<p>You can change the connection associated with the current SQL editor or change the active database/schema, at the same time retaining the SQL text.<br />
+To change the connection, press <kbd>Ctrl+9</kbd> or click the <strong>Active datasource</strong> box on DBeaver`s main toolbar:</p>
+<p><img alt="" src="../images/ug/Active-Connection-change.png" /></p>
+<p>The Select Data Source dialog box opens. In the tree of connections, click the required connection and then click <strong>Select</strong>. To disassociate the SQL Editor with any connection, click <strong>None</strong>:</p>
+<p><img alt="" src="../images/ug/Connection-change-dialog.png" /></p>
+<p>To change the active schema, press <kbd>Ctrl+0</kbd> or click the <strong>Active Catalog/Schema</strong> box in DBeaver`s main toolbar:</p>
+<p><img alt="" src="../images/ug/Active-Schema-Change.png" /></p>
+<p>The Choose catalog/schema dialog box opens. In the list of schemas, double-click the required schema:</p>
+<p><img alt="" src="../images/ug/Schema-change-dialog.png" /></p>
+<p>If there are many schemas and they do not fit in the dialog box use the search field to find the schema you need: <img alt="" src="../images/ug/Search-field.png" /></p>
+<p>To configure the set of columns to be visible for each schema in the dialog box, click the <strong>Configure columns</strong> button (<img alt="" src="../images/ug/Configure-columns-visibility-icon.png" />).</p>
+<p>You can easily associate the SQL Editor with the connection that is currently in focus in the Database Navigator (the focus can be on any object of the connection - a table, a folder, etc.) - click the <strong>Set connection from navigator</strong> button in DBeaver`s main toolbar:</p>
+<p><img alt="" src="../images/ug/Set-connection-to-DBNavigator.png" /></p>
+<p>The reverse action is also possible: you can set the focus of the Database Navigator to the active connection of the SQL Editor - press <kbd>Ctrl+Shift+,</kbd> or click the arrow next to the <strong>Set connection from navigator</strong> button in DBeaver`s main toolbar and then click <strong>Link with editor</strong>:</p>
+<p><img alt="" src="../images/ug/Link-with-Editor-from SQLEditor.png" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../SQL-Execution/" class="btn btn-neutral float-right" title="SQL Execution">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../SQL-Creation-and-Editing/" class="btn btn-neutral" title="SQL Creation and Editing"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../SQL-Creation-and-Editing/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../SQL-Execution/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

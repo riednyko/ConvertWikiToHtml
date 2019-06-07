@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Database drivers - Dbeaver</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Database drivers";
+    var mkdocs_page_input_path = "Database-drivers.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Dbeaver</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">About DBeaver</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../3rd-party-dependencies/">3rd party dependencies</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Admin-Manage-Connections/">Admin Manage Connections</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Admin-Manage-Drivers/">Admin Manage Drivers</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Apache-Hive/">Apache Hive</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Application-Window-Overview/">Application Window Overview</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Auto-Tests/">Auto Tests</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Auto-and-Manual-Commit-Modes/">Auto and Manual Commit Modes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Background-Tasks/">Background Tasks</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Bookmarks/">Bookmarks</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Build-from-sources/">Build from sources</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Cassandra/">Cassandra</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Clickhouse/">Clickhouse</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Client-Side-Scripting/">Client Side Scripting</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Command-Line/">Command line parameters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Configure-Filters/">Configure Filters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Connect-to-Database/">Connect to Database</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Connection-Types/">Connection Types</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Create-Connection/">Create Connection</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Custom-Diagrams/">Custom Diagrams</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../DB-Full-Text-Search/">DB Full Text Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../DB-Metadata-Search/">DB Metadata Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Dashboards/">Dashboards</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Editor/">Data Editor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Filter/">Data Filter</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Filters/">Data Filters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Refresh/">Data Refresh</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Search/">Data Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-View-and-Format/">Data View and Format</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Viewing-and-Editing/">Data Viewing and Editing</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-migration/">Data migration</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-transfer/">Data transfer</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data/">Data</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-Connections/">Database Connections</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-Navigator/">Database Navigator</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-Object-Editor/">Database Object Editor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-Structure-Diagrams/">Database Structure Diagrams</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Database drivers</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#obtaining-jdbc-driver">Obtaining JDBC driver</a></li>
+    
+
+    <li class="toctree-l2"><a href="#adding-driver-configuration-in-dbeaver">Adding driver configuration in DBeaver</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#open-driver-manager-dialog">Open driver manager dialog</a></li>
+        
+            <li><a class="toctree-l3" href="#add-new-driver">Add new driver</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#main-parameters">Main parameters</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#libraries">Libraries</a></li>
+        
+            <li><a class="toctree-l3" href="#maven-artifacts">Maven artifacts</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#saving-driver-adding-connection">Saving driver, adding connection</a></li>
+    
+
+    <li class="toctree-l2"><a href="#url-templates">URL Templates</a></li>
+    
+
+    <li class="toctree-l2"><a href="#advanced-settings">Advanced settings</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#main-parameters_1">Main parameters</a></li>
+        
+            <li><a class="toctree-l3" href="#queries-custom-driver-queries">Queries (Custom driver queries)</a></li>
+        
+            <li><a class="toctree-l3" href="#ddl-ddl-generation-options">DDL (DDL generation options)</a></li>
+        
+            <li><a class="toctree-l3" href="#formatting-sql-values-formats">Formatting (SQL values formats)</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#summary">Summary</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../DebugPluginInstall/">DebugPluginInstall</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Develop-in-Eclipse/">Develop in Eclipse</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Develop-in-IDEA/">Develop in IDEA</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Disconnect-from-Database/">Disconnect from Database</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../ER-Diagrams/">ER Diagrams</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Eclipse-extensions/">Eclipse extensions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Edit-Connection/">Edit Connection</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Enterprise-Edition/">Enterprise Edition</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Extension-Office/">Extension Office</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Extension-SVG-Format/">Extension SVG Format</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Features-structure/">Features structure</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../File-Search/">File Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Filter-Database-Objects/">Filter Database Objects</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../GIS-examples/">GIS examples</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Home/">About DBeaver</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Installation/">Installation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Invalidate-and-Reconnect-to-Database/">Invalidate and Reconnect to Database</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../JDBC-Time-Zones/">JDBC Time Zones</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Localization/">Localization</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Log-files/">Log files</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Making-a-thread-dump/">Making a thread dump</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Managing-Charts/">Managing Charts</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Managing-Data-Formats/">Managing Data Formats</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Mock-Data-Generation-in-DBeaver/">Mock Data Generation in DBeaver</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Navigation/">Navigation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../New-Table-creation/">New Table creation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../NoSQL-MongoDB/">NoSQL MongoDB</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Optional-extensions/">Optional extensions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../PGDebugger/">Prerequisites for Debugging</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Panels/">Panels</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Pending-Transactions/">Pending Transactions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Posting-issues/">Posting issues</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Project-Explorer/">Project Explorer</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Projects-View/">Projects View</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Projects/">Projects</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Properties-Editor/">Properties Editor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Query-Manager/">Query Manager</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Reset-UI-settings/">Reset UI settings</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Reset-workspace/">Reset workspace</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Assist-and-Auto-Complete/">SQL Assist and Auto Complete</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Creation-and-Editing/">SQL Creation and Editing</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Editor/">SQL Editor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Execution/">SQL Execution</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Formatting/">SQL Formatting</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Generation/">SQL Generation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Templates/">SQL Templates</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Script-Management/">Script Management</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Search/">Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Shortcuts/">Shortcuts</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Transaction-Log/">Transaction Log</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../User-Guide/">User Guide</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Views/">Views</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Visual-Query-Builder/">Visual Query Builder</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Windows-Silent-Install/">Windows Silent Install</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Work-with-XML/">Work with XML</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Working-with-XML-and-JSON/">Working with XML and JSON</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Workspace-Overview/">Workspace Overview</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../_Footer/"> Footer</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../_Sidebar/"> Sidebar</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../_Toc/"> Toc</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../about/">About</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../sqleditor/">Sqleditor</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Dbeaver</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Database drivers</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>You can use pre-configured database driver or create new driver.</p>
+<p>DBeaver has a lot of pre-configured driver including SQL, NoSQL, key-value databases, graph databases, search engines, etc.
+But sometimes you need to connect to a database which was not configured in DBeaver yet.</p>
+<p>All you need is JDBC driver of your database. The rest is easy.</p>
+<h3 id="obtaining-jdbc-driver">Obtaining JDBC driver</h3>
+<p>JDBC driver is a program (in Java) which can connect and operate with some local or remote database server. It usually provides all needed functionality to cover 100% of database functionality. Usually, JDBC driver are provided by database vendors to let customers ability to work with their databases.</p>
+<p>JDBC driver consists of one or multiple <code>jar</code> files. Jar file is a library which contains program code and some other files.
+You need to download driver's jar files before adding them in DBeaver. Sometimes jar files are included in database server distribution - in that case you need to refer your database documentation or ask your DBA.</p>
+<h3 id="adding-driver-configuration-in-dbeaver">Adding driver configuration in DBeaver</h3>
+<h5 id="open-driver-manager-dialog">Open driver manager dialog</h5>
+<p>You can open driver manager from main menu:<br />
+<img alt="" src="../images/ug/drivers/database-menu.png" /><br />
+or from Database Navigator drop-down menu.<br />
+<img alt="" src="../images/ug/drivers/driver-manager.png" /></p>
+<h5 id="add-new-driver">Add new driver</h5>
+<p>Just click the button New and create a new driver.
+On the driver edit dialog you need to enter all required information:</p>
+<h3 id="main-parameters">Main parameters</h3>
+<p><img alt="" src="../images/ug/drivers/driver-edit.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Driver Name</td>
+<td>Name of your driver. It can be any name you like</td>
+</tr>
+<tr>
+<td>Driver Type</td>
+<td>Driver provider. In 99% cases you will need Generic driver (JDBC provider)</td>
+</tr>
+<tr>
+<td>Class Name</td>
+<td>JDBC driver class name. You can get it from the documentation or find it in jar files (see "Find Class" button description)</td>
+</tr>
+<tr>
+<td>URL Template</td>
+<td>Template of driver URL. You can leave it empty. But in this case you will be ready to set JDBC URL for each your connection. It is better to define a valid template, this will greatly simplify connections creation. See "URL Templates" for the detailed description</td>
+</tr>
+<tr>
+<td>Default Port</td>
+<td>Default database port. You can get it from documentation or leave it empty</td>
+</tr>
+<tr>
+<td>Embedded</td>
+<td>Enable it for server-less databases. This flag affects a few config options related to network/connections management</td>
+</tr>
+<tr>
+<td>No Authentication</td>
+<td>This means that driver doesn't require authentication (no user/password fields will be shown)</td>
+</tr>
+<tr>
+<td>Category</td>
+<td>Driver category, deprecated</td>
+</tr>
+<tr>
+<td>ID</td>
+<td>Driver unique ID, ignore it</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Driver description, it is shown on some dialogs/wizards as a hint</td>
+</tr>
+</tbody>
+</table>
+<h5 id="libraries">Libraries</h5>
+<p>This is the list of jar files, binary libraries (dll or so) and any other files required by driver. In most cases you need only jar files.<br />
+Click "Add File" to add single jar file, "Add Folder" to add folder with Java classes/resources and "Add Artifact" to add Maven artifact (see below).  </p>
+<p>After you add jar files you will be able to find all JDBC driver classes which present in these jars. Just click on the "Find Class" button and DBeaver will show all of them. In most cases there is just one driver class in the driver. If there are many of them then you need to refer to the driver's documentation.</p>
+<h5 id="maven-artifacts">Maven artifacts</h5>
+<p>DBeaver can download driver jars directly from Maven repository (it is a global public repository of Java libraries, usually open-source). If your database driver is published on some public repository you can use this feature. Maven artifacts are better than plain jar files because you can see all existing driver versions and can change driver version in runtime without any driver properties reconfiguration.</p>
+<h3 id="saving-driver-adding-connection">Saving driver, adding connection</h3>
+<p>After you finished configuring your driver just press Ok button.<br />
+Now you can [[create connection]].</p>
+<p>If you need to change some driver properties later you can access them directly from connection properties dialog:</p>
+<p><img alt="" src="../images/ug/drivers/connection-edit.png" /></p>
+<h3 id="url-templates">URL Templates</h3>
+<p>JDBC drivers use URLs to identify remote servers - strings similar to classic web URLs.
+Usually, URL has form <code>jdbc:vendor:host:port/database</code>, for example `jdbc:postgresql:localhost:5432/postgres'.
+It is not very convenient to edit such long and unobvious string.
+DBeaver can construct this URL from connection parameters (like host, port, etc).</p>
+<p>For example above the URL template is: jdbc:postgresql://{host}:{port}/{database}<br />
+Host, port and database are parameters which you will need to enter on the connection configuration page.</p>
+<p>Supported URL variables:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{host}</td>
+<td>Database server host name</td>
+</tr>
+<tr>
+<td>{port}</td>
+<td>Database server port number</td>
+</tr>
+<tr>
+<td>{database}</td>
+<td>Target database name</td>
+</tr>
+<tr>
+<td>{server}</td>
+<td>Target server name (rarely used)</td>
+</tr>
+<tr>
+<td>{folder}</td>
+<td>Folder path (on the local file system). Used for embedded drivers</td>
+</tr>
+<tr>
+<td>{file}</td>
+<td>File path (on the local file system). Used for embedded drivers</td>
+</tr>
+</tbody>
+</table>
+<h3 id="advanced-settings">Advanced settings</h3>
+<p>For most driver you don't need to change any advanced properties.
+But in some cases you can use this as a driver tuning, e.g. for better performance or for structure fixing.</p>
+<p><img alt="" src="../images/ug/drivers/driver-properties.png" /></p>
+<h6 id="main-parameters_1">Main parameters</h6>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Driver supports indexes</td>
+<td>Driver supports table indexes</td>
+</tr>
+<tr>
+<td>Driver supports stored code</td>
+<td>Whether this driver supports stored code (procedures, functions, packages, etc)</td>
+</tr>
+<tr>
+<td>Driver supports references</td>
+<td>Driver supports table references (foreign keys)</td>
+</tr>
+<tr>
+<td>Driver supports SELECT count(*) clause</td>
+<td>Driver supports SELECT count(*) clause</td>
+</tr>
+<tr>
+<td>Split procedures and functions</td>
+<td>Show procedures and functions in different folders</td>
+</tr>
+<tr>
+<td>Script delimiter</td>
+<td>Literal for SQL queries separation in scripts</td>
+</tr>
+<tr>
+<td>Script delimiter redefiner</td>
+<td>SQL clause which redefines script delimiter value</td>
+</tr>
+<tr>
+<td>Use script delimiter after query</td>
+<td>Keep SQL script delimiter after each SQL query</td>
+</tr>
+<tr>
+<td>Use script delimiter after SQL block</td>
+<td>Keep SQL script delimiter after SQL script blocks (BEGIN/END)</td>
+</tr>
+<tr>
+<td>String escape character</td>
+<td>Character used to escape special symbols in strings</td>
+</tr>
+<tr>
+<td>Meta model type</td>
+<td>Type of metadata reading model - standard or indexed</td>
+</tr>
+<tr>
+<td>All Objects Pattern</td>
+<td>SQL pattern for all metadata objects</td>
+</tr>
+<tr>
+<td>Omit catalog(s)</td>
+<td>Do not read and use catalog (aka database) information</td>
+</tr>
+<tr>
+<td>Omit single catalog</td>
+<td>Hide catalog (database) if there is only one catalog on server</td>
+</tr>
+<tr>
+<td>Omit single schema</td>
+<td>Hide schema if there is only one schema on server</td>
+</tr>
+<tr>
+<td>Omit type cache</td>
+<td>Do not use data types provided by driver</td>
+</tr>
+<tr>
+<td>Shutdown parameter</td>
+<td>Database shutdown URL parameter</td>
+</tr>
+<tr>
+<td>Create database parameter</td>
+<td>Database create URL parameter</td>
+</tr>
+<tr>
+<td>Driver supports multiple results</td>
+<td>Driver supports multiple results for a single query</td>
+</tr>
+<tr>
+<td>Driver supports result set limit</td>
+<td>Driver supports multiple result set limit (max rows)</td>
+</tr>
+<tr>
+<td>Driver supports structure cache</td>
+<td>Driver supports structure cache reading. Enables schema columns, keys, etc</td>
+</tr>
+<tr>
+<td>Driver supports TRUNCATE operation</td>
+<td>Driver supports TRUNCATE command. It is much faster than DELETE without criteria</td>
+</tr>
+</tbody>
+</table>
+<h6 id="queries-custom-driver-queries">Queries (Custom driver queries)</h6>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Get active database</td>
+<td>Query to obtain active database name</td>
+</tr>
+<tr>
+<td>Set active database</td>
+<td>Query to change active database</td>
+</tr>
+<tr>
+<td>Shutdown database</td>
+<td>Query to shutdown active database connection. Used for some embedded databases</td>
+</tr>
+<tr>
+<td>PING query</td>
+<td>Query to check connection state</td>
+</tr>
+<tr>
+<td>Dual table name</td>
+<td>Name of dummy 'DUAL' table which is used for expressions evaluation</td>
+</tr>
+<tr>
+<td>Active object type</td>
+<td>Type of selectable object (schema, catalog)</td>
+</tr>
+<tr>
+<td>Driver supports results scrolling</td>
+<td>Driver supports resultset scrolling</td>
+</tr>
+<tr>
+<td>Quote reserved words</td>
+<td>Quote columns/table names if they conflicts with reserved SQL keywords</td>
+</tr>
+<tr>
+<td>Escape LIKE masks in search queries</td>
+<td>Use to access JDBC metadata API. Enabled by default but should be disabled for some (broken) driverss</td>
+</tr>
+</tbody>
+</table>
+<h6 id="ddl-ddl-generation-options">DDL (DDL generation options)</h6>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Drop column short syntax</td>
+<td>Use 'ALTER TABLE DROP column-name' instead of standard syntax</td>
+</tr>
+<tr>
+<td>Use legacy SQL dialect for DDL</td>
+<td>Use legacy SQL dialect for DDL</td>
+</tr>
+</tbody>
+</table>
+<h6 id="formatting-sql-values-formats">Formatting (SQL values formats)</h6>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Timestamp format</td>
+<td>Format pattern for timestamp columns</td>
+</tr>
+<tr>
+<td>Date format</td>
+<td>Format pattern for date columns</td>
+</tr>
+<tr>
+<td>Time format</td>
+<td>Format pattern for time columns</td>
+</tr>
+</tbody>
+</table>
+<h3 id="summary">Summary</h3>
+<p>If you have configured some driver, it works good and you think that it makes sense to have this driver configuration in standard DBeaver, please send your configuration to us. Just create a feature request issue on GitHub and copy/paste driver description to the ticket (in any suitable form).</p>
+<p>Thank you :)</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../DebugPluginInstall/" class="btn btn-neutral float-right" title="DebugPluginInstall">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Database-Structure-Diagrams/" class="btn btn-neutral" title="Database Structure Diagrams"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Database-Structure-Diagrams/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../DebugPluginInstall/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

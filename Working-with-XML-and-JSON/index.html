@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Working with XML and JSON - Dbeaver</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Working with XML and JSON";
+    var mkdocs_page_input_path = "Working-with-XML-and-JSON.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Dbeaver</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">About DBeaver</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../3rd-party-dependencies/">3rd party dependencies</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Admin-Manage-Connections/">Admin Manage Connections</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Admin-Manage-Drivers/">Admin Manage Drivers</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Apache-Hive/">Apache Hive</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Application-Window-Overview/">Application Window Overview</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Auto-Tests/">Auto Tests</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Auto-and-Manual-Commit-Modes/">Auto and Manual Commit Modes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Background-Tasks/">Background Tasks</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Bookmarks/">Bookmarks</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Build-from-sources/">Build from sources</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Cassandra/">Cassandra</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Clickhouse/">Clickhouse</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Client-Side-Scripting/">Client Side Scripting</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Command-Line/">Command line parameters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Configure-Filters/">Configure Filters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Connect-to-Database/">Connect to Database</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Connection-Types/">Connection Types</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Create-Connection/">Create Connection</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Custom-Diagrams/">Custom Diagrams</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../DB-Full-Text-Search/">DB Full Text Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../DB-Metadata-Search/">DB Metadata Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Dashboards/">Dashboards</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Editor/">Data Editor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Filter/">Data Filter</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Filters/">Data Filters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Refresh/">Data Refresh</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Search/">Data Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-View-and-Format/">Data View and Format</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Viewing-and-Editing/">Data Viewing and Editing</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-migration/">Data migration</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-transfer/">Data transfer</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data/">Data</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-Connections/">Database Connections</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-Navigator/">Database Navigator</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-Object-Editor/">Database Object Editor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-Structure-Diagrams/">Database Structure Diagrams</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-drivers/">Database drivers</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../DebugPluginInstall/">DebugPluginInstall</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Develop-in-Eclipse/">Develop in Eclipse</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Develop-in-IDEA/">Develop in IDEA</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Disconnect-from-Database/">Disconnect from Database</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../ER-Diagrams/">ER Diagrams</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Eclipse-extensions/">Eclipse extensions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Edit-Connection/">Edit Connection</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Enterprise-Edition/">Enterprise Edition</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Extension-Office/">Extension Office</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Extension-SVG-Format/">Extension SVG Format</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Features-structure/">Features structure</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../File-Search/">File Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Filter-Database-Objects/">Filter Database Objects</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../GIS-examples/">GIS examples</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Home/">About DBeaver</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Installation/">Installation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Invalidate-and-Reconnect-to-Database/">Invalidate and Reconnect to Database</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../JDBC-Time-Zones/">JDBC Time Zones</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Localization/">Localization</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Log-files/">Log files</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Making-a-thread-dump/">Making a thread dump</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Managing-Charts/">Managing Charts</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Managing-Data-Formats/">Managing Data Formats</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Mock-Data-Generation-in-DBeaver/">Mock Data Generation in DBeaver</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Navigation/">Navigation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../New-Table-creation/">New Table creation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../NoSQL-MongoDB/">NoSQL MongoDB</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Optional-extensions/">Optional extensions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../PGDebugger/">Prerequisites for Debugging</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Panels/">Panels</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Pending-Transactions/">Pending Transactions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Posting-issues/">Posting issues</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Project-Explorer/">Project Explorer</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Projects-View/">Projects View</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Projects/">Projects</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Properties-Editor/">Properties Editor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Query-Manager/">Query Manager</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Reset-UI-settings/">Reset UI settings</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Reset-workspace/">Reset workspace</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Assist-and-Auto-Complete/">SQL Assist and Auto Complete</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Creation-and-Editing/">SQL Creation and Editing</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Editor/">SQL Editor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Execution/">SQL Execution</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Formatting/">SQL Formatting</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Generation/">SQL Generation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Templates/">SQL Templates</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Script-Management/">Script Management</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Search/">Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Shortcuts/">Shortcuts</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Transaction-Log/">Transaction Log</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../User-Guide/">User Guide</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Views/">Views</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Visual-Query-Builder/">Visual Query Builder</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Windows-Silent-Install/">Windows Silent Install</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Work-with-XML/">Work with XML</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Working with XML and JSON</a>
+    <ul class="subnav">
+            
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Workspace-Overview/">Workspace Overview</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../_Footer/"> Footer</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../_Sidebar/"> Sidebar</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../_Toc/"> Toc</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../about/">About</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../sqleditor/">Sqleditor</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Dbeaver</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Working with XML and JSON</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>DBeaver supports XML and JSON column types (in relational databases) by using standard JDBC interfaces. This feature was added in JDBC4 so you will need JDBC4 compliant driver for your database.</p>
+<p>In the Data Editor, you can edit XML/JSON data right in the table cells, however, a big amount of data may require a larger editor, you may want to save XML/JSON scripts to a local file or upload this type of data from a local file.</p>
+<p>To open the full-size XML/JSON editor click the cell containing data in XML/JSON format and press <kbd>Shift</kbd>+<kbd>Enter</kbd>. </p>
+<p>By default the editor opens on JSON tab, open XML tab to modify XML data.</p>
+<p><img alt="" src="../images/ug/JSON_editor.png" /></p>
+<p>To auto-format XML/JSON script press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd> keyboard buttons.</p>
+<p><img alt="" src="../images/ug/JSON_editor_format.png" /></p>
+<p>Use <kbd>Ctrl</kbd>+<kbd>S</kbd> keyboard shortcut to save the changes made.</p>
+<p>You can also edit XML/JSON content, save it locally and upload it from a local file with the help of <strong>Value</strong> panel toolbar. </p>
+<p><img alt="" src="../images/ug/Value_Viewer_Editor_Toolbar.png" /></p>
+<p>To upload data from a local file, press the <strong>Load from file...</strong> button <img alt="" src="../images/ug/XML_editor_load_from_file_icon.png" />.</p>
+<p>To save the content to a local file, press the <strong>Save to file...</strong> button <img alt="" src="../images/ug/XML_editor_save_to_file_icon.png" />.</p>
+<p>To switch between the formats, press the <strong>Content viewer settings</strong> button <img alt="" src="../images/ug/XML_editor_icon.png" /> and select the format.</p>
+<p><img alt="" src="../images/ug/XML_editor_menu.png" /></p>
+<p>Use <strong>Word Wrap</strong> feature that wraps the text within a screen.</p>
+<p><img alt="" src="../images/ug/JSON_editor_word_wrap.png" /></p>
+<p>Use <strong>Auto Format</strong> feature to automatically change the appearance of XML/JSON script (fix spaces around operators / commas, fix indentation, etc) and make it more readable.</p>
+<p><img alt="" src="../images/ug/JSON_editor_auto_format.png" /></p>
+<p>To learn more about <strong>Value</strong> panel, see <a href="https://github.com/dbeaver/dbeaver/wiki/Panels#value-viewer">Panels</a>.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Workspace-Overview/" class="btn btn-neutral float-right" title="Workspace Overview">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Work-with-XML/" class="btn btn-neutral" title="Work with XML"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Work-with-XML/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Workspace-Overview/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

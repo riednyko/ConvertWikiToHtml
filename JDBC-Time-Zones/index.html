@@ -1,0 +1,3645 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>JDBC Time Zones - Dbeaver</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "JDBC Time Zones";
+    var mkdocs_page_input_path = "JDBC-Time-Zones.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Dbeaver</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">About DBeaver</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../3rd-party-dependencies/">3rd party dependencies</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Admin-Manage-Connections/">Admin Manage Connections</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Admin-Manage-Drivers/">Admin Manage Drivers</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Apache-Hive/">Apache Hive</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Application-Window-Overview/">Application Window Overview</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Auto-Tests/">Auto Tests</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Auto-and-Manual-Commit-Modes/">Auto and Manual Commit Modes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Background-Tasks/">Background Tasks</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Bookmarks/">Bookmarks</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Build-from-sources/">Build from sources</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Cassandra/">Cassandra</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Clickhouse/">Clickhouse</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Client-Side-Scripting/">Client Side Scripting</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Command-Line/">Command line parameters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Configure-Filters/">Configure Filters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Connect-to-Database/">Connect to Database</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Connection-Types/">Connection Types</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Create-Connection/">Create Connection</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Custom-Diagrams/">Custom Diagrams</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../DB-Full-Text-Search/">DB Full Text Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../DB-Metadata-Search/">DB Metadata Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Dashboards/">Dashboards</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Editor/">Data Editor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Filter/">Data Filter</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Filters/">Data Filters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Refresh/">Data Refresh</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Search/">Data Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-View-and-Format/">Data View and Format</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Viewing-and-Editing/">Data Viewing and Editing</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-migration/">Data migration</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-transfer/">Data transfer</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data/">Data</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-Connections/">Database Connections</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-Navigator/">Database Navigator</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-Object-Editor/">Database Object Editor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-Structure-Diagrams/">Database Structure Diagrams</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-drivers/">Database drivers</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../DebugPluginInstall/">DebugPluginInstall</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Develop-in-Eclipse/">Develop in Eclipse</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Develop-in-IDEA/">Develop in IDEA</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Disconnect-from-Database/">Disconnect from Database</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../ER-Diagrams/">ER Diagrams</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Eclipse-extensions/">Eclipse extensions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Edit-Connection/">Edit Connection</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Enterprise-Edition/">Enterprise Edition</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Extension-Office/">Extension Office</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Extension-SVG-Format/">Extension SVG Format</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Features-structure/">Features structure</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../File-Search/">File Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Filter-Database-Objects/">Filter Database Objects</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../GIS-examples/">GIS examples</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Home/">About DBeaver</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Installation/">Installation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Invalidate-and-Reconnect-to-Database/">Invalidate and Reconnect to Database</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">JDBC Time Zones</a>
+    <ul class="subnav">
+            
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Localization/">Localization</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Log-files/">Log files</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Making-a-thread-dump/">Making a thread dump</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Managing-Charts/">Managing Charts</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Managing-Data-Formats/">Managing Data Formats</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Mock-Data-Generation-in-DBeaver/">Mock Data Generation in DBeaver</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Navigation/">Navigation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../New-Table-creation/">New Table creation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../NoSQL-MongoDB/">NoSQL MongoDB</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Optional-extensions/">Optional extensions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../PGDebugger/">Prerequisites for Debugging</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Panels/">Panels</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Pending-Transactions/">Pending Transactions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Posting-issues/">Posting issues</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Project-Explorer/">Project Explorer</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Projects-View/">Projects View</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Projects/">Projects</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Properties-Editor/">Properties Editor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Query-Manager/">Query Manager</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Reset-UI-settings/">Reset UI settings</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Reset-workspace/">Reset workspace</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Assist-and-Auto-Complete/">SQL Assist and Auto Complete</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Creation-and-Editing/">SQL Creation and Editing</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Editor/">SQL Editor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Execution/">SQL Execution</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Formatting/">SQL Formatting</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Generation/">SQL Generation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Templates/">SQL Templates</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Script-Management/">Script Management</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Search/">Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Shortcuts/">Shortcuts</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Transaction-Log/">Transaction Log</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../User-Guide/">User Guide</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Views/">Views</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Visual-Query-Builder/">Visual Query Builder</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Windows-Silent-Install/">Windows Silent Install</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Work-with-XML/">Work with XML</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Working-with-XML-and-JSON/">Working with XML and JSON</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Workspace-Overview/">Workspace Overview</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../_Footer/"> Footer</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../_Sidebar/"> Sidebar</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../_Toc/"> Toc</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../about/">About</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../sqleditor/">Sqleditor</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Dbeaver</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>JDBC Time Zones</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Display Name</th>
+<th>GMT shift</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Africa/Abidjan</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Africa/Accra</td>
+<td>Ghana Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Africa/Addis_Ababa</td>
+<td>Eastern African Time</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>Africa/Algiers</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Africa/Asmara</td>
+<td>Eastern African Time</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>Africa/Asmera</td>
+<td>Eastern African Time</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>Africa/Bamako</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Africa/Bangui</td>
+<td>Western African Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Africa/Banjul</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Africa/Bissau</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Africa/Blantyre</td>
+<td>Central African Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Africa/Brazzaville</td>
+<td>Western African Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Africa/Bujumbura</td>
+<td>Central African Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Africa/Cairo</td>
+<td>Eastern European Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Africa/Casablanca</td>
+<td>Western European Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Africa/Ceuta</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Africa/Conakry</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Africa/Dakar</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Africa/Dar_es_Salaam</td>
+<td>Eastern African Time</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>Africa/Djibouti</td>
+<td>Eastern African Time</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>Africa/Douala</td>
+<td>Western African Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Africa/El_Aaiun</td>
+<td>Western European Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Africa/Freetown</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Africa/Gaborone</td>
+<td>Central African Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Africa/Harare</td>
+<td>Central African Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Africa/Johannesburg</td>
+<td>South Africa Standard Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Africa/Juba</td>
+<td>Eastern African Time</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>Africa/Kampala</td>
+<td>Eastern African Time</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>Africa/Khartoum</td>
+<td>Eastern African Time</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>Africa/Kigali</td>
+<td>Central African Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Africa/Kinshasa</td>
+<td>Western African Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Africa/Lagos</td>
+<td>Western African Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Africa/Libreville</td>
+<td>Western African Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Africa/Lome</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Africa/Luanda</td>
+<td>Western African Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Africa/Lubumbashi</td>
+<td>Central African Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Africa/Lusaka</td>
+<td>Central African Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Africa/Malabo</td>
+<td>Western African Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Africa/Maputo</td>
+<td>Central African Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Africa/Maseru</td>
+<td>South Africa Standard Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Africa/Mbabane</td>
+<td>South Africa Standard Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Africa/Mogadishu</td>
+<td>Eastern African Time</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>Africa/Monrovia</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Africa/Nairobi</td>
+<td>Eastern African Time</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>Africa/Ndjamena</td>
+<td>Western African Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Africa/Niamey</td>
+<td>Western African Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Africa/Nouakchott</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Africa/Ouagadougou</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Africa/Porto-Novo</td>
+<td>Western African Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Africa/Sao_Tome</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Africa/Timbuktu</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Africa/Tripoli</td>
+<td>Eastern European Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Africa/Tunis</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Africa/Windhoek</td>
+<td>Western African Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>America/Adak</td>
+<td>Hawaii Standard Time</td>
+<td>-10.0</td>
+</tr>
+<tr>
+<td>America/Anchorage</td>
+<td>Alaska Standard Time</td>
+<td>-9.0</td>
+</tr>
+<tr>
+<td>America/Anguilla</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Antigua</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Araguaina</td>
+<td>Brasilia Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Argentina/Buenos_Aires</td>
+<td>Argentine Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Argentina/Catamarca</td>
+<td>Argentine Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Argentina/ComodRivadavia</td>
+<td>Argentine Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Argentina/Cordoba</td>
+<td>Argentine Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Argentina/Jujuy</td>
+<td>Argentine Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Argentina/La_Rioja</td>
+<td>Argentine Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Argentina/Mendoza</td>
+<td>Argentine Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Argentina/Rio_Gallegos</td>
+<td>Argentine Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Argentina/Salta</td>
+<td>Argentine Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Argentina/San_Juan</td>
+<td>Argentine Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Argentina/San_Luis</td>
+<td>Argentine Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Argentina/Tucuman</td>
+<td>Argentine Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Argentina/Ushuaia</td>
+<td>Argentine Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Aruba</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Asuncion</td>
+<td>Paraguay Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Atikokan</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/Atka</td>
+<td>Hawaii Standard Time</td>
+<td>-10.0</td>
+</tr>
+<tr>
+<td>America/Bahia</td>
+<td>Brasilia Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Bahia_Banderas</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>America/Barbados</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Belem</td>
+<td>Brasilia Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Belize</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>America/Blanc-Sablon</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Boa_Vista</td>
+<td>Amazon Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Bogota</td>
+<td>Colombia Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/Boise</td>
+<td>Mountain Standard Time</td>
+<td>-7.0</td>
+</tr>
+<tr>
+<td>America/Buenos_Aires</td>
+<td>Argentine Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Cambridge_Bay</td>
+<td>Mountain Standard Time</td>
+<td>-7.0</td>
+</tr>
+<tr>
+<td>America/Campo_Grande</td>
+<td>Amazon Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Cancun</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/Caracas</td>
+<td>Venezuela Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Catamarca</td>
+<td>Argentine Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Cayenne</td>
+<td>French Guiana Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Cayman</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/Chicago</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>America/Chihuahua</td>
+<td>Mountain Standard Time</td>
+<td>-7.0</td>
+</tr>
+<tr>
+<td>America/Coral_Harbour</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/Cordoba</td>
+<td>Argentine Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Costa_Rica</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>America/Creston</td>
+<td>Mountain Standard Time</td>
+<td>-7.0</td>
+</tr>
+<tr>
+<td>America/Cuiaba</td>
+<td>Amazon Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Curacao</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Danmarkshavn</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>America/Dawson</td>
+<td>Pacific Standard Time</td>
+<td>-8.0</td>
+</tr>
+<tr>
+<td>America/Dawson_Creek</td>
+<td>Mountain Standard Time</td>
+<td>-7.0</td>
+</tr>
+<tr>
+<td>America/Denver</td>
+<td>Mountain Standard Time</td>
+<td>-7.0</td>
+</tr>
+<tr>
+<td>America/Detroit</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/Dominica</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Edmonton</td>
+<td>Mountain Standard Time</td>
+<td>-7.0</td>
+</tr>
+<tr>
+<td>America/Eirunepe</td>
+<td>Acre Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/El_Salvador</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>America/Ensenada</td>
+<td>Pacific Standard Time</td>
+<td>-8.0</td>
+</tr>
+<tr>
+<td>America/Fort_Nelson</td>
+<td>Mountain Standard Time</td>
+<td>-7.0</td>
+</tr>
+<tr>
+<td>America/Fort_Wayne</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/Fortaleza</td>
+<td>Brasilia Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Glace_Bay</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Godthab</td>
+<td>Western Greenland Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Goose_Bay</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Grand_Turk</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Grenada</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Guadeloupe</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Guatemala</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>America/Guayaquil</td>
+<td>Ecuador Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/Guyana</td>
+<td>Guyana Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Halifax</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Havana</td>
+<td>Cuba Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/Hermosillo</td>
+<td>Mountain Standard Time</td>
+<td>-7.0</td>
+</tr>
+<tr>
+<td>America/Indiana/Indianapolis</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/Indiana/Knox</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>America/Indiana/Marengo</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/Indiana/Petersburg</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/Indiana/Tell_City</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>America/Indiana/Vevay</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/Indiana/Vincennes</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/Indiana/Winamac</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/Indianapolis</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/Inuvik</td>
+<td>Mountain Standard Time</td>
+<td>-7.0</td>
+</tr>
+<tr>
+<td>America/Iqaluit</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/Jamaica</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/Jujuy</td>
+<td>Argentine Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Juneau</td>
+<td>Alaska Standard Time</td>
+<td>-9.0</td>
+</tr>
+<tr>
+<td>America/Kentucky/Louisville</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/Kentucky/Monticello</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/Knox_IN</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>America/Kralendijk</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/La_Paz</td>
+<td>Bolivia Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Lima</td>
+<td>Peru Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/Los_Angeles</td>
+<td>Pacific Standard Time</td>
+<td>-8.0</td>
+</tr>
+<tr>
+<td>America/Louisville</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/Lower_Princes</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Maceio</td>
+<td>Brasilia Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Managua</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>America/Manaus</td>
+<td>Amazon Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Marigot</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Martinique</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Matamoros</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>America/Mazatlan</td>
+<td>Mountain Standard Time</td>
+<td>-7.0</td>
+</tr>
+<tr>
+<td>America/Mendoza</td>
+<td>Argentine Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Menominee</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>America/Merida</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>America/Metlakatla</td>
+<td>Alaska Standard Time</td>
+<td>-9.0</td>
+</tr>
+<tr>
+<td>America/Mexico_City</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>America/Miquelon</td>
+<td>Pierre &amp; Miquelon Standard Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Moncton</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Monterrey</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>America/Montevideo</td>
+<td>Uruguay Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Montreal</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/Montserrat</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Nassau</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/New_York</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/Nipigon</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/Nome</td>
+<td>Alaska Standard Time</td>
+<td>-9.0</td>
+</tr>
+<tr>
+<td>America/Noronha</td>
+<td>Fernando de Noronha Time</td>
+<td>-2.0</td>
+</tr>
+<tr>
+<td>America/North_Dakota/Beulah</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>America/North_Dakota/Center</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>America/North_Dakota/New_Salem</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>America/Ojinaga</td>
+<td>Mountain Standard Time</td>
+<td>-7.0</td>
+</tr>
+<tr>
+<td>America/Panama</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/Pangnirtung</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/Paramaribo</td>
+<td>Suriname Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Phoenix</td>
+<td>Mountain Standard Time</td>
+<td>-7.0</td>
+</tr>
+<tr>
+<td>America/Port-au-Prince</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/Port_of_Spain</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Porto_Acre</td>
+<td>Acre Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/Porto_Velho</td>
+<td>Amazon Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Puerto_Rico</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Punta_Arenas</td>
+<td>GMT-03:00</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Rainy_River</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>America/Rankin_Inlet</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>America/Recife</td>
+<td>Brasilia Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Regina</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>America/Resolute</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>America/Rio_Branco</td>
+<td>Acre Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/Rosario</td>
+<td>Argentine Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Santa_Isabel</td>
+<td>Pacific Standard Time</td>
+<td>-8.0</td>
+</tr>
+<tr>
+<td>America/Santarem</td>
+<td>Brasilia Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Santiago</td>
+<td>Chile Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Santo_Domingo</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Sao_Paulo</td>
+<td>Brasilia Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>America/Scoresbysund</td>
+<td>Eastern Greenland Time</td>
+<td>-1.0</td>
+</tr>
+<tr>
+<td>America/Shiprock</td>
+<td>Mountain Standard Time</td>
+<td>-7.0</td>
+</tr>
+<tr>
+<td>America/Sitka</td>
+<td>Alaska Standard Time</td>
+<td>-9.0</td>
+</tr>
+<tr>
+<td>America/St_Barthelemy</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/St_Johns</td>
+<td>Newfoundland Standard Time</td>
+<td>-3.5</td>
+</tr>
+<tr>
+<td>America/St_Kitts</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/St_Lucia</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/St_Thomas</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/St_Vincent</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Swift_Current</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>America/Tegucigalpa</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>America/Thule</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Thunder_Bay</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/Tijuana</td>
+<td>Pacific Standard Time</td>
+<td>-8.0</td>
+</tr>
+<tr>
+<td>America/Toronto</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>America/Tortola</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Vancouver</td>
+<td>Pacific Standard Time</td>
+<td>-8.0</td>
+</tr>
+<tr>
+<td>America/Virgin</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>America/Whitehorse</td>
+<td>Pacific Standard Time</td>
+<td>-8.0</td>
+</tr>
+<tr>
+<td>America/Winnipeg</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>America/Yakutat</td>
+<td>Alaska Standard Time</td>
+<td>-9.0</td>
+</tr>
+<tr>
+<td>America/Yellowknife</td>
+<td>Mountain Standard Time</td>
+<td>-7.0</td>
+</tr>
+<tr>
+<td>Antarctica/Casey</td>
+<td>Australian Western Standard Time</td>
+<td>11.0</td>
+</tr>
+<tr>
+<td>Antarctica/Davis</td>
+<td>Davis Time</td>
+<td>7.0</td>
+</tr>
+<tr>
+<td>Antarctica/DumontDUrville</td>
+<td>Dumont-d'Urville Time</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>Antarctica/Macquarie</td>
+<td>Macquarie Island Standard Time</td>
+<td>11.0</td>
+</tr>
+<tr>
+<td>Antarctica/Mawson</td>
+<td>Mawson Time</td>
+<td>5.0</td>
+</tr>
+<tr>
+<td>Antarctica/McMurdo</td>
+<td>New Zealand Standard Time</td>
+<td>12.0</td>
+</tr>
+<tr>
+<td>Antarctica/Palmer</td>
+<td>Chile Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>Antarctica/Rothera</td>
+<td>Rothera Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>Antarctica/South_Pole</td>
+<td>New Zealand Standard Time</td>
+<td>12.0</td>
+</tr>
+<tr>
+<td>Antarctica/Syowa</td>
+<td>Syowa Time</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>Antarctica/Troll</td>
+<td>Coordinated Universal Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Antarctica/Vostok</td>
+<td>Vostok Time</td>
+<td>6.0</td>
+</tr>
+<tr>
+<td>Arctic/Longyearbyen</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Asia/Aden</td>
+<td>Arabia Standard Time</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>Asia/Almaty</td>
+<td>Alma-Ata Time</td>
+<td>6.0</td>
+</tr>
+<tr>
+<td>Asia/Amman</td>
+<td>Eastern European Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Asia/Anadyr</td>
+<td>Anadyr Time</td>
+<td>12.0</td>
+</tr>
+<tr>
+<td>Asia/Aqtau</td>
+<td>Aqtau Time</td>
+<td>5.0</td>
+</tr>
+<tr>
+<td>Asia/Aqtobe</td>
+<td>Aqtobe Time</td>
+<td>5.0</td>
+</tr>
+<tr>
+<td>Asia/Ashgabat</td>
+<td>Turkmenistan Time</td>
+<td>5.0</td>
+</tr>
+<tr>
+<td>Asia/Ashkhabad</td>
+<td>Turkmenistan Time</td>
+<td>5.0</td>
+</tr>
+<tr>
+<td>Asia/Atyrau</td>
+<td>GMT+05:00</td>
+<td>5.0</td>
+</tr>
+<tr>
+<td>Asia/Baghdad</td>
+<td>Arabia Standard Time</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>Asia/Bahrain</td>
+<td>Arabia Standard Time</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>Asia/Baku</td>
+<td>Azerbaijan Time</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>Asia/Bangkok</td>
+<td>Indochina Time</td>
+<td>7.0</td>
+</tr>
+<tr>
+<td>Asia/Barnaul</td>
+<td>GMT+07:00</td>
+<td>7.0</td>
+</tr>
+<tr>
+<td>Asia/Beirut</td>
+<td>Eastern European Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Asia/Bishkek</td>
+<td>Kirgizstan Time</td>
+<td>6.0</td>
+</tr>
+<tr>
+<td>Asia/Brunei</td>
+<td>Brunei Time</td>
+<td>8.0</td>
+</tr>
+<tr>
+<td>Asia/Calcutta</td>
+<td>India Standard Time</td>
+<td>5.5</td>
+</tr>
+<tr>
+<td>Asia/Chita</td>
+<td>Yakutsk Time</td>
+<td>9.0</td>
+</tr>
+<tr>
+<td>Asia/Choibalsan</td>
+<td>Choibalsan Time</td>
+<td>8.0</td>
+</tr>
+<tr>
+<td>Asia/Chongqing</td>
+<td>China Standard Time</td>
+<td>8.0</td>
+</tr>
+<tr>
+<td>Asia/Chungking</td>
+<td>China Standard Time</td>
+<td>8.0</td>
+</tr>
+<tr>
+<td>Asia/Colombo</td>
+<td>India Standard Time</td>
+<td>5.5</td>
+</tr>
+<tr>
+<td>Asia/Dacca</td>
+<td>Bangladesh Time</td>
+<td>6.0</td>
+</tr>
+<tr>
+<td>Asia/Damascus</td>
+<td>Eastern European Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Asia/Dhaka</td>
+<td>Bangladesh Time</td>
+<td>6.0</td>
+</tr>
+<tr>
+<td>Asia/Dili</td>
+<td>Timor-Leste Time</td>
+<td>9.0</td>
+</tr>
+<tr>
+<td>Asia/Dubai</td>
+<td>Gulf Standard Time</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>Asia/Dushanbe</td>
+<td>Tajikistan Time</td>
+<td>5.0</td>
+</tr>
+<tr>
+<td>Asia/Famagusta</td>
+<td>GMT+03:00</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>Asia/Gaza</td>
+<td>Eastern European Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Asia/Harbin</td>
+<td>China Standard Time</td>
+<td>8.0</td>
+</tr>
+<tr>
+<td>Asia/Hebron</td>
+<td>Eastern European Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Asia/Ho_Chi_Minh</td>
+<td>Indochina Time</td>
+<td>7.0</td>
+</tr>
+<tr>
+<td>Asia/Hong_Kong</td>
+<td>Hong Kong Time</td>
+<td>8.0</td>
+</tr>
+<tr>
+<td>Asia/Hovd</td>
+<td>Hovd Time</td>
+<td>7.0</td>
+</tr>
+<tr>
+<td>Asia/Irkutsk</td>
+<td>Irkutsk Time</td>
+<td>8.0</td>
+</tr>
+<tr>
+<td>Asia/Istanbul</td>
+<td>Eastern European Time</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>Asia/Jakarta</td>
+<td>West Indonesia Time</td>
+<td>7.0</td>
+</tr>
+<tr>
+<td>Asia/Jayapura</td>
+<td>East Indonesia Time</td>
+<td>9.0</td>
+</tr>
+<tr>
+<td>Asia/Jerusalem</td>
+<td>Israel Standard Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Asia/Kabul</td>
+<td>Afghanistan Time</td>
+<td>4.5</td>
+</tr>
+<tr>
+<td>Asia/Kamchatka</td>
+<td>Petropavlovsk-Kamchatski Time</td>
+<td>12.0</td>
+</tr>
+<tr>
+<td>Asia/Karachi</td>
+<td>Pakistan Time</td>
+<td>5.0</td>
+</tr>
+<tr>
+<td>Asia/Kashgar</td>
+<td>Xinjiang Standard Time</td>
+<td>6.0</td>
+</tr>
+<tr>
+<td>Asia/Kathmandu</td>
+<td>Nepal Time</td>
+<td>5.75</td>
+</tr>
+<tr>
+<td>Asia/Katmandu</td>
+<td>Nepal Time</td>
+<td>5.75</td>
+</tr>
+<tr>
+<td>Asia/Khandyga</td>
+<td>Yakutsk Time</td>
+<td>9.0</td>
+</tr>
+<tr>
+<td>Asia/Kolkata</td>
+<td>India Standard Time</td>
+<td>5.5</td>
+</tr>
+<tr>
+<td>Asia/Krasnoyarsk</td>
+<td>Krasnoyarsk Time</td>
+<td>7.0</td>
+</tr>
+<tr>
+<td>Asia/Kuala_Lumpur</td>
+<td>Malaysia Time</td>
+<td>8.0</td>
+</tr>
+<tr>
+<td>Asia/Kuching</td>
+<td>Malaysia Time</td>
+<td>8.0</td>
+</tr>
+<tr>
+<td>Asia/Kuwait</td>
+<td>Arabia Standard Time</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>Asia/Macao</td>
+<td>China Standard Time</td>
+<td>8.0</td>
+</tr>
+<tr>
+<td>Asia/Macau</td>
+<td>China Standard Time</td>
+<td>8.0</td>
+</tr>
+<tr>
+<td>Asia/Magadan</td>
+<td>Magadan Time</td>
+<td>11.0</td>
+</tr>
+<tr>
+<td>Asia/Makassar</td>
+<td>Central Indonesia Time</td>
+<td>8.0</td>
+</tr>
+<tr>
+<td>Asia/Manila</td>
+<td>Philippines Time</td>
+<td>8.0</td>
+</tr>
+<tr>
+<td>Asia/Muscat</td>
+<td>Gulf Standard Time</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>Asia/Nicosia</td>
+<td>Eastern European Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Asia/Novokuznetsk</td>
+<td>Krasnoyarsk Time</td>
+<td>7.0</td>
+</tr>
+<tr>
+<td>Asia/Novosibirsk</td>
+<td>Novosibirsk Time</td>
+<td>7.0</td>
+</tr>
+<tr>
+<td>Asia/Omsk</td>
+<td>Omsk Time</td>
+<td>6.0</td>
+</tr>
+<tr>
+<td>Asia/Oral</td>
+<td>Oral Time</td>
+<td>5.0</td>
+</tr>
+<tr>
+<td>Asia/Phnom_Penh</td>
+<td>Indochina Time</td>
+<td>7.0</td>
+</tr>
+<tr>
+<td>Asia/Pontianak</td>
+<td>West Indonesia Time</td>
+<td>7.0</td>
+</tr>
+<tr>
+<td>Asia/Pyongyang</td>
+<td>Korea Standard Time</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Asia/Qatar</td>
+<td>Arabia Standard Time</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>Asia/Qyzylorda</td>
+<td>Qyzylorda Time</td>
+<td>6.0</td>
+</tr>
+<tr>
+<td>Asia/Rangoon</td>
+<td>Myanmar Time</td>
+<td>6.5</td>
+</tr>
+<tr>
+<td>Asia/Riyadh</td>
+<td>Arabia Standard Time</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>Asia/Saigon</td>
+<td>Indochina Time</td>
+<td>7.0</td>
+</tr>
+<tr>
+<td>Asia/Sakhalin</td>
+<td>Sakhalin Time</td>
+<td>11.0</td>
+</tr>
+<tr>
+<td>Asia/Samarkand</td>
+<td>Uzbekistan Time</td>
+<td>5.0</td>
+</tr>
+<tr>
+<td>Asia/Seoul</td>
+<td>Korea Standard Time</td>
+<td>9.0</td>
+</tr>
+<tr>
+<td>Asia/Shanghai</td>
+<td>China Standard Time</td>
+<td>8.0</td>
+</tr>
+<tr>
+<td>Asia/Singapore</td>
+<td>Singapore Time</td>
+<td>8.0</td>
+</tr>
+<tr>
+<td>Asia/Srednekolymsk</td>
+<td>Srednekolymsk Time</td>
+<td>11.0</td>
+</tr>
+<tr>
+<td>Asia/Taipei</td>
+<td>China Standard Time</td>
+<td>8.0</td>
+</tr>
+<tr>
+<td>Asia/Tashkent</td>
+<td>Uzbekistan Time</td>
+<td>5.0</td>
+</tr>
+<tr>
+<td>Asia/Tbilisi</td>
+<td>Georgia Time</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>Asia/Tehran</td>
+<td>Iran Standard Time</td>
+<td>3.5</td>
+</tr>
+<tr>
+<td>Asia/Tel_Aviv</td>
+<td>Israel Standard Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Asia/Thimbu</td>
+<td>Bhutan Time</td>
+<td>6.0</td>
+</tr>
+<tr>
+<td>Asia/Thimphu</td>
+<td>Bhutan Time</td>
+<td>6.0</td>
+</tr>
+<tr>
+<td>Asia/Tokyo</td>
+<td>Japan Standard Time</td>
+<td>9.0</td>
+</tr>
+<tr>
+<td>Asia/Tomsk</td>
+<td>GMT+07:00</td>
+<td>7.0</td>
+</tr>
+<tr>
+<td>Asia/Ujung_Pandang</td>
+<td>Central Indonesia Time</td>
+<td>8.0</td>
+</tr>
+<tr>
+<td>Asia/Ulaanbaatar</td>
+<td>Ulaanbaatar Time</td>
+<td>8.0</td>
+</tr>
+<tr>
+<td>Asia/Ulan_Bator</td>
+<td>Ulaanbaatar Time</td>
+<td>8.0</td>
+</tr>
+<tr>
+<td>Asia/Urumqi</td>
+<td>Xinjiang Standard Time</td>
+<td>6.0</td>
+</tr>
+<tr>
+<td>Asia/Ust-Nera</td>
+<td>Ust-Nera Time</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>Asia/Vientiane</td>
+<td>Indochina Time</td>
+<td>7.0</td>
+</tr>
+<tr>
+<td>Asia/Vladivostok</td>
+<td>Vladivostok Time</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>Asia/Yakutsk</td>
+<td>Yakutsk Time</td>
+<td>9.0</td>
+</tr>
+<tr>
+<td>Asia/Yangon</td>
+<td>Myanmar Time</td>
+<td>6.5</td>
+</tr>
+<tr>
+<td>Asia/Yekaterinburg</td>
+<td>Yekaterinburg Time</td>
+<td>5.0</td>
+</tr>
+<tr>
+<td>Asia/Yerevan</td>
+<td>Armenia Time</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>Atlantic/Azores</td>
+<td>Azores Time</td>
+<td>-1.0</td>
+</tr>
+<tr>
+<td>Atlantic/Bermuda</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>Atlantic/Canary</td>
+<td>Western European Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Atlantic/Cape_Verde</td>
+<td>Cape Verde Time</td>
+<td>-1.0</td>
+</tr>
+<tr>
+<td>Atlantic/Faeroe</td>
+<td>Western European Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Atlantic/Faroe</td>
+<td>Western European Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Atlantic/Jan_Mayen</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Atlantic/Madeira</td>
+<td>Western European Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Atlantic/Reykjavik</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Atlantic/South_Georgia</td>
+<td>South Georgia Standard Time</td>
+<td>-2.0</td>
+</tr>
+<tr>
+<td>Atlantic/St_Helena</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Atlantic/Stanley</td>
+<td>Falkland Is. Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>Australia/ACT</td>
+<td>Australian Eastern Standard Time (New South Wales)</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>Australia/Adelaide</td>
+<td>Australian Central Standard Time (South Australia)</td>
+<td>9.5</td>
+</tr>
+<tr>
+<td>Australia/Brisbane</td>
+<td>Australian Eastern Standard Time (Queensland)</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>Australia/Broken_Hill</td>
+<td>Australian Central Standard Time (South Australia/New South Wales)</td>
+<td>9.5</td>
+</tr>
+<tr>
+<td>Australia/Canberra</td>
+<td>Australian Eastern Standard Time (New South Wales)</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>Australia/Currie</td>
+<td>Australian Eastern Standard Time (New South Wales)</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>Australia/Darwin</td>
+<td>Australian Central Standard Time (Northern Territory)</td>
+<td>9.5</td>
+</tr>
+<tr>
+<td>Australia/Eucla</td>
+<td>Australian Central Western Standard Time</td>
+<td>8.75</td>
+</tr>
+<tr>
+<td>Australia/Hobart</td>
+<td>Australian Eastern Standard Time (Tasmania)</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>Australia/LHI</td>
+<td>Lord Howe Standard Time</td>
+<td>10.5</td>
+</tr>
+<tr>
+<td>Australia/Lindeman</td>
+<td>Australian Eastern Standard Time (Queensland)</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>Australia/Lord_Howe</td>
+<td>Lord Howe Standard Time</td>
+<td>10.5</td>
+</tr>
+<tr>
+<td>Australia/Melbourne</td>
+<td>Australian Eastern Standard Time (Victoria)</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>Australia/NSW</td>
+<td>Australian Eastern Standard Time (New South Wales)</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>Australia/North</td>
+<td>Australian Central Standard Time (Northern Territory)</td>
+<td>9.5</td>
+</tr>
+<tr>
+<td>Australia/Perth</td>
+<td>Australian Western Standard Time</td>
+<td>8.0</td>
+</tr>
+<tr>
+<td>Australia/Queensland</td>
+<td>Australian Eastern Standard Time (Queensland)</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>Australia/South</td>
+<td>Australian Central Standard Time (South Australia)</td>
+<td>9.5</td>
+</tr>
+<tr>
+<td>Australia/Sydney</td>
+<td>Australian Eastern Standard Time (New South Wales)</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>Australia/Tasmania</td>
+<td>Australian Eastern Standard Time (Tasmania)</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>Australia/Victoria</td>
+<td>Australian Eastern Standard Time (Victoria)</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>Australia/West</td>
+<td>Australian Western Standard Time</td>
+<td>8.0</td>
+</tr>
+<tr>
+<td>Australia/Yancowinna</td>
+<td>Australian Central Standard Time (South Australia/New South Wales)</td>
+<td>9.5</td>
+</tr>
+<tr>
+<td>Brazil/Acre</td>
+<td>Acre Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>Brazil/DeNoronha</td>
+<td>Fernando de Noronha Time</td>
+<td>-2.0</td>
+</tr>
+<tr>
+<td>Brazil/East</td>
+<td>Brasilia Time</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>Brazil/West</td>
+<td>Amazon Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>CET</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>CST6CDT</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>Canada/Atlantic</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>Canada/Central</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>Canada/East-Saskatchewan</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>Canada/Eastern</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>Canada/Mountain</td>
+<td>Mountain Standard Time</td>
+<td>-7.0</td>
+</tr>
+<tr>
+<td>Canada/Newfoundland</td>
+<td>Newfoundland Standard Time</td>
+<td>-3.5</td>
+</tr>
+<tr>
+<td>Canada/Pacific</td>
+<td>Pacific Standard Time</td>
+<td>-8.0</td>
+</tr>
+<tr>
+<td>Canada/Saskatchewan</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>Canada/Yukon</td>
+<td>Pacific Standard Time</td>
+<td>-8.0</td>
+</tr>
+<tr>
+<td>Chile/Continental</td>
+<td>Chile Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>Chile/EasterIsland</td>
+<td>Easter Is. Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>Cuba</td>
+<td>Cuba Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>EET</td>
+<td>Eastern European Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>EST5EDT</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>Egypt</td>
+<td>Eastern European Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Eire</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Etc/GMT</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Etc/GMT+0</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Etc/GMT+1</td>
+<td>GMT-01:00</td>
+<td>-1.0</td>
+</tr>
+<tr>
+<td>Etc/GMT+10</td>
+<td>GMT-10:00</td>
+<td>-10.0</td>
+</tr>
+<tr>
+<td>Etc/GMT+11</td>
+<td>GMT-11:00</td>
+<td>-11.0</td>
+</tr>
+<tr>
+<td>Etc/GMT+12</td>
+<td>GMT-12:00</td>
+<td>-12.0</td>
+</tr>
+<tr>
+<td>Etc/GMT+2</td>
+<td>GMT-02:00</td>
+<td>-2.0</td>
+</tr>
+<tr>
+<td>Etc/GMT+3</td>
+<td>GMT-03:00</td>
+<td>-3.0</td>
+</tr>
+<tr>
+<td>Etc/GMT+4</td>
+<td>GMT-04:00</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>Etc/GMT+5</td>
+<td>GMT-05:00</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>Etc/GMT+6</td>
+<td>GMT-06:00</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>Etc/GMT+7</td>
+<td>GMT-07:00</td>
+<td>-7.0</td>
+</tr>
+<tr>
+<td>Etc/GMT+8</td>
+<td>GMT-08:00</td>
+<td>-8.0</td>
+</tr>
+<tr>
+<td>Etc/GMT+9</td>
+<td>GMT-09:00</td>
+<td>-9.0</td>
+</tr>
+<tr>
+<td>Etc/GMT-0</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Etc/GMT-1</td>
+<td>GMT+01:00</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Etc/GMT-10</td>
+<td>GMT+10:00</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>Etc/GMT-11</td>
+<td>GMT+11:00</td>
+<td>11.0</td>
+</tr>
+<tr>
+<td>Etc/GMT-12</td>
+<td>GMT+12:00</td>
+<td>12.0</td>
+</tr>
+<tr>
+<td>Etc/GMT-13</td>
+<td>GMT+13:00</td>
+<td>13.0</td>
+</tr>
+<tr>
+<td>Etc/GMT-14</td>
+<td>GMT+14:00</td>
+<td>14.0</td>
+</tr>
+<tr>
+<td>Etc/GMT-2</td>
+<td>GMT+02:00</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Etc/GMT-3</td>
+<td>GMT+03:00</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>Etc/GMT-4</td>
+<td>GMT+04:00</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>Etc/GMT-5</td>
+<td>GMT+05:00</td>
+<td>5.0</td>
+</tr>
+<tr>
+<td>Etc/GMT-6</td>
+<td>GMT+06:00</td>
+<td>6.0</td>
+</tr>
+<tr>
+<td>Etc/GMT-7</td>
+<td>GMT+07:00</td>
+<td>7.0</td>
+</tr>
+<tr>
+<td>Etc/GMT-8</td>
+<td>GMT+08:00</td>
+<td>8.0</td>
+</tr>
+<tr>
+<td>Etc/GMT-9</td>
+<td>GMT+09:00</td>
+<td>9.0</td>
+</tr>
+<tr>
+<td>Etc/GMT0</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Etc/Greenwich</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Etc/UCT</td>
+<td>Coordinated Universal Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Etc/UTC</td>
+<td>Coordinated Universal Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Etc/Universal</td>
+<td>Coordinated Universal Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Etc/Zulu</td>
+<td>Coordinated Universal Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Europe/Amsterdam</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Europe/Andorra</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Europe/Astrakhan</td>
+<td>GMT+04:00</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>Europe/Athens</td>
+<td>Eastern European Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Europe/Belfast</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Europe/Belgrade</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Europe/Berlin</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Europe/Bratislava</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Europe/Brussels</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Europe/Bucharest</td>
+<td>Eastern European Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Europe/Budapest</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Europe/Busingen</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Europe/Chisinau</td>
+<td>Eastern European Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Europe/Copenhagen</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Europe/Dublin</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Europe/Gibraltar</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Europe/Guernsey</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Europe/Helsinki</td>
+<td>Eastern European Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Europe/Isle_of_Man</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Europe/Istanbul</td>
+<td>Eastern European Time</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>Europe/Jersey</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Europe/Kaliningrad</td>
+<td>Eastern European Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Europe/Kiev</td>
+<td>Eastern European Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Europe/Kirov</td>
+<td>GMT+03:00</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>Europe/Lisbon</td>
+<td>Western European Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Europe/Ljubljana</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Europe/London</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Europe/Luxembourg</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Europe/Madrid</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Europe/Malta</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Europe/Mariehamn</td>
+<td>Eastern European Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Europe/Minsk</td>
+<td>Moscow Standard Time</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>Europe/Monaco</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Europe/Moscow</td>
+<td>Moscow Standard Time</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>Europe/Nicosia</td>
+<td>Eastern European Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Europe/Oslo</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Europe/Paris</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Europe/Podgorica</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Europe/Prague</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Europe/Riga</td>
+<td>Eastern European Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Europe/Rome</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Europe/Samara</td>
+<td>Samara Time</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>Europe/San_Marino</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Europe/Sarajevo</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Europe/Saratov</td>
+<td>GMT+04:00</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>Europe/Simferopol</td>
+<td>Moscow Standard Time</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>Europe/Skopje</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Europe/Sofia</td>
+<td>Eastern European Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Europe/Stockholm</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Europe/Tallinn</td>
+<td>Eastern European Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Europe/Tirane</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Europe/Tiraspol</td>
+<td>Eastern European Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Europe/Ulyanovsk</td>
+<td>GMT+04:00</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>Europe/Uzhgorod</td>
+<td>Eastern European Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Europe/Vaduz</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Europe/Vatican</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Europe/Vienna</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Europe/Vilnius</td>
+<td>Eastern European Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Europe/Volgograd</td>
+<td>Moscow Standard Time</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>Europe/Warsaw</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Europe/Zagreb</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Europe/Zaporozhye</td>
+<td>Eastern European Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Europe/Zurich</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>GB</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>GB-Eire</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>GMT</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>GMT0</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Greenwich</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Hongkong</td>
+<td>Hong Kong Time</td>
+<td>8.0</td>
+</tr>
+<tr>
+<td>Iceland</td>
+<td>Greenwich Mean Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Indian/Antananarivo</td>
+<td>Eastern African Time</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>Indian/Chagos</td>
+<td>Indian Ocean Territory Time</td>
+<td>6.0</td>
+</tr>
+<tr>
+<td>Indian/Christmas</td>
+<td>Christmas Island Time</td>
+<td>7.0</td>
+</tr>
+<tr>
+<td>Indian/Cocos</td>
+<td>Cocos Islands Time</td>
+<td>6.5</td>
+</tr>
+<tr>
+<td>Indian/Comoro</td>
+<td>Eastern African Time</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>Indian/Kerguelen</td>
+<td>French Southern &amp; Antarctic Lands Time</td>
+<td>5.0</td>
+</tr>
+<tr>
+<td>Indian/Mahe</td>
+<td>Seychelles Time</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>Indian/Maldives</td>
+<td>Maldives Time</td>
+<td>5.0</td>
+</tr>
+<tr>
+<td>Indian/Mauritius</td>
+<td>Mauritius Time</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>Indian/Mayotte</td>
+<td>Eastern African Time</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>Indian/Reunion</td>
+<td>Reunion Time</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>Iran</td>
+<td>Iran Standard Time</td>
+<td>3.5</td>
+</tr>
+<tr>
+<td>Israel</td>
+<td>Israel Standard Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Jamaica</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>Japan</td>
+<td>Japan Standard Time</td>
+<td>9.0</td>
+</tr>
+<tr>
+<td>Kwajalein</td>
+<td>Marshall Islands Time</td>
+<td>12.0</td>
+</tr>
+<tr>
+<td>Libya</td>
+<td>Eastern European Time</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>MET</td>
+<td>Middle Europe Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>MST7MDT</td>
+<td>Mountain Standard Time</td>
+<td>-7.0</td>
+</tr>
+<tr>
+<td>Mexico/BajaNorte</td>
+<td>Pacific Standard Time</td>
+<td>-8.0</td>
+</tr>
+<tr>
+<td>Mexico/BajaSur</td>
+<td>Mountain Standard Time</td>
+<td>-7.0</td>
+</tr>
+<tr>
+<td>Mexico/General</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>NZ</td>
+<td>New Zealand Standard Time</td>
+<td>12.0</td>
+</tr>
+<tr>
+<td>NZ-CHAT</td>
+<td>Chatham Standard Time</td>
+<td>12.75</td>
+</tr>
+<tr>
+<td>Navajo</td>
+<td>Mountain Standard Time</td>
+<td>-7.0</td>
+</tr>
+<tr>
+<td>PRC</td>
+<td>China Standard Time</td>
+<td>8.0</td>
+</tr>
+<tr>
+<td>PST8PDT</td>
+<td>Pacific Standard Time</td>
+<td>-8.0</td>
+</tr>
+<tr>
+<td>Pacific/Apia</td>
+<td>West Samoa Standard Time</td>
+<td>13.0</td>
+</tr>
+<tr>
+<td>Pacific/Auckland</td>
+<td>New Zealand Standard Time</td>
+<td>12.0</td>
+</tr>
+<tr>
+<td>Pacific/Bougainville</td>
+<td>Bougainville Standard Time</td>
+<td>11.0</td>
+</tr>
+<tr>
+<td>Pacific/Chatham</td>
+<td>Chatham Standard Time</td>
+<td>12.75</td>
+</tr>
+<tr>
+<td>Pacific/Chuuk</td>
+<td>Chuuk Time</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>Pacific/Easter</td>
+<td>Easter Is. Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>Pacific/Efate</td>
+<td>Vanuatu Time</td>
+<td>11.0</td>
+</tr>
+<tr>
+<td>Pacific/Enderbury</td>
+<td>Phoenix Is. Time</td>
+<td>13.0</td>
+</tr>
+<tr>
+<td>Pacific/Fakaofo</td>
+<td>Tokelau Time</td>
+<td>13.0</td>
+</tr>
+<tr>
+<td>Pacific/Fiji</td>
+<td>Fiji Time</td>
+<td>12.0</td>
+</tr>
+<tr>
+<td>Pacific/Funafuti</td>
+<td>Tuvalu Time</td>
+<td>12.0</td>
+</tr>
+<tr>
+<td>Pacific/Galapagos</td>
+<td>Galapagos Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>Pacific/Gambier</td>
+<td>Gambier Time</td>
+<td>-9.0</td>
+</tr>
+<tr>
+<td>Pacific/Guadalcanal</td>
+<td>Solomon Is. Time</td>
+<td>11.0</td>
+</tr>
+<tr>
+<td>Pacific/Guam</td>
+<td>Chamorro Standard Time</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>Pacific/Honolulu</td>
+<td>Hawaii Standard Time</td>
+<td>-10.0</td>
+</tr>
+<tr>
+<td>Pacific/Johnston</td>
+<td>Hawaii Standard Time</td>
+<td>-10.0</td>
+</tr>
+<tr>
+<td>Pacific/Kiritimati</td>
+<td>Line Is. Time</td>
+<td>14.0</td>
+</tr>
+<tr>
+<td>Pacific/Kosrae</td>
+<td>Kosrae Time</td>
+<td>11.0</td>
+</tr>
+<tr>
+<td>Pacific/Kwajalein</td>
+<td>Marshall Islands Time</td>
+<td>12.0</td>
+</tr>
+<tr>
+<td>Pacific/Majuro</td>
+<td>Marshall Islands Time</td>
+<td>12.0</td>
+</tr>
+<tr>
+<td>Pacific/Marquesas</td>
+<td>Marquesas Time</td>
+<td>-9.5</td>
+</tr>
+<tr>
+<td>Pacific/Midway</td>
+<td>Samoa Standard Time</td>
+<td>-11.0</td>
+</tr>
+<tr>
+<td>Pacific/Nauru</td>
+<td>Nauru Time</td>
+<td>12.0</td>
+</tr>
+<tr>
+<td>Pacific/Niue</td>
+<td>Niue Time</td>
+<td>-11.0</td>
+</tr>
+<tr>
+<td>Pacific/Norfolk</td>
+<td>Norfolk Time</td>
+<td>11.0</td>
+</tr>
+<tr>
+<td>Pacific/Noumea</td>
+<td>New Caledonia Time</td>
+<td>11.0</td>
+</tr>
+<tr>
+<td>Pacific/Pago_Pago</td>
+<td>Samoa Standard Time</td>
+<td>-11.0</td>
+</tr>
+<tr>
+<td>Pacific/Palau</td>
+<td>Palau Time</td>
+<td>9.0</td>
+</tr>
+<tr>
+<td>Pacific/Pitcairn</td>
+<td>Pitcairn Standard Time</td>
+<td>-8.0</td>
+</tr>
+<tr>
+<td>Pacific/Pohnpei</td>
+<td>Pohnpei Time</td>
+<td>11.0</td>
+</tr>
+<tr>
+<td>Pacific/Ponape</td>
+<td>Pohnpei Time</td>
+<td>11.0</td>
+</tr>
+<tr>
+<td>Pacific/Port_Moresby</td>
+<td>Papua New Guinea Time</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>Pacific/Rarotonga</td>
+<td>Cook Is. Time</td>
+<td>-10.0</td>
+</tr>
+<tr>
+<td>Pacific/Saipan</td>
+<td>Chamorro Standard Time</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>Pacific/Samoa</td>
+<td>Samoa Standard Time</td>
+<td>-11.0</td>
+</tr>
+<tr>
+<td>Pacific/Tahiti</td>
+<td>Tahiti Time</td>
+<td>-10.0</td>
+</tr>
+<tr>
+<td>Pacific/Tarawa</td>
+<td>Gilbert Is. Time</td>
+<td>12.0</td>
+</tr>
+<tr>
+<td>Pacific/Tongatapu</td>
+<td>Tonga Time</td>
+<td>13.0</td>
+</tr>
+<tr>
+<td>Pacific/Truk</td>
+<td>Chuuk Time</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>Pacific/Wake</td>
+<td>Wake Time</td>
+<td>12.0</td>
+</tr>
+<tr>
+<td>Pacific/Wallis</td>
+<td>Wallis &amp; Futuna Time</td>
+<td>12.0</td>
+</tr>
+<tr>
+<td>Pacific/Yap</td>
+<td>Chuuk Time</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>Poland</td>
+<td>Central European Time</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Portugal</td>
+<td>Western European Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>ROK</td>
+<td>Korea Standard Time</td>
+<td>9.0</td>
+</tr>
+<tr>
+<td>Singapore</td>
+<td>Singapore Time</td>
+<td>8.0</td>
+</tr>
+<tr>
+<td>SystemV/AST4</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>SystemV/AST4ADT</td>
+<td>Atlantic Standard Time</td>
+<td>-4.0</td>
+</tr>
+<tr>
+<td>SystemV/CST6</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>SystemV/CST6CDT</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>SystemV/EST5</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>SystemV/EST5EDT</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>SystemV/HST10</td>
+<td>Hawaii Standard Time</td>
+<td>-10.0</td>
+</tr>
+<tr>
+<td>SystemV/MST7</td>
+<td>Mountain Standard Time</td>
+<td>-7.0</td>
+</tr>
+<tr>
+<td>SystemV/MST7MDT</td>
+<td>Mountain Standard Time</td>
+<td>-7.0</td>
+</tr>
+<tr>
+<td>SystemV/PST8</td>
+<td>Pacific Standard Time</td>
+<td>-8.0</td>
+</tr>
+<tr>
+<td>SystemV/PST8PDT</td>
+<td>Pacific Standard Time</td>
+<td>-8.0</td>
+</tr>
+<tr>
+<td>SystemV/YST9</td>
+<td>Alaska Standard Time</td>
+<td>-9.0</td>
+</tr>
+<tr>
+<td>SystemV/YST9YDT</td>
+<td>Alaska Standard Time</td>
+<td>-9.0</td>
+</tr>
+<tr>
+<td>Turkey</td>
+<td>Eastern European Time</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>UCT</td>
+<td>Coordinated Universal Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>US/Alaska</td>
+<td>Alaska Standard Time</td>
+<td>-9.0</td>
+</tr>
+<tr>
+<td>US/Aleutian</td>
+<td>Hawaii Standard Time</td>
+<td>-10.0</td>
+</tr>
+<tr>
+<td>US/Arizona</td>
+<td>Mountain Standard Time</td>
+<td>-7.0</td>
+</tr>
+<tr>
+<td>US/Central</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>US/East-Indiana</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>US/Eastern</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>US/Hawaii</td>
+<td>Hawaii Standard Time</td>
+<td>-10.0</td>
+</tr>
+<tr>
+<td>US/Indiana-Starke</td>
+<td>Central Standard Time</td>
+<td>-6.0</td>
+</tr>
+<tr>
+<td>US/Michigan</td>
+<td>Eastern Standard Time</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<td>US/Mountain</td>
+<td>Mountain Standard Time</td>
+<td>-7.0</td>
+</tr>
+<tr>
+<td>US/Pacific</td>
+<td>Pacific Standard Time</td>
+<td>-8.0</td>
+</tr>
+<tr>
+<td>US/Pacific-New</td>
+<td>Pacific Standard Time</td>
+<td>-8.0</td>
+</tr>
+<tr>
+<td>US/Samoa</td>
+<td>Samoa Standard Time</td>
+<td>-11.0</td>
+</tr>
+<tr>
+<td>UTC</td>
+<td>Coordinated Universal Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Universal</td>
+<td>Coordinated Universal Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>W-SU</td>
+<td>Moscow Standard Time</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>WET</td>
+<td>Western European Time</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>Zulu</td>
+<td>Coordinated Universal Time</td>
+<td>0.0</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Localization/" class="btn btn-neutral float-right" title="Localization">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Invalidate-and-Reconnect-to-Database/" class="btn btn-neutral" title="Invalidate and Reconnect to Database"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Invalidate-and-Reconnect-to-Database/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Localization/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

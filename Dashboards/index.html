@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Dashboards - Dbeaver</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Dashboards";
+    var mkdocs_page_input_path = "Dashboards.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Dbeaver</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">About DBeaver</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../3rd-party-dependencies/">3rd party dependencies</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Admin-Manage-Connections/">Admin Manage Connections</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Admin-Manage-Drivers/">Admin Manage Drivers</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Apache-Hive/">Apache Hive</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Application-Window-Overview/">Application Window Overview</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Auto-Tests/">Auto Tests</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Auto-and-Manual-Commit-Modes/">Auto and Manual Commit Modes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Background-Tasks/">Background Tasks</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Bookmarks/">Bookmarks</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Build-from-sources/">Build from sources</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Cassandra/">Cassandra</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Clickhouse/">Clickhouse</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Client-Side-Scripting/">Client Side Scripting</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Command-Line/">Command line parameters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Configure-Filters/">Configure Filters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Connect-to-Database/">Connect to Database</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Connection-Types/">Connection Types</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Create-Connection/">Create Connection</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Custom-Diagrams/">Custom Diagrams</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../DB-Full-Text-Search/">DB Full Text Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../DB-Metadata-Search/">DB Metadata Search</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Dashboards</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#managing-dashboards-panel">Managing Dashboards Panel</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#opening-dashboard-panel">Opening Dashboard Panel</a></li>
+        
+            <li><a class="toctree-l3" href="#adding-dashboards">Adding Dashboards</a></li>
+        
+            <li><a class="toctree-l3" href="#removing-dashboards">Removing Dashboards</a></li>
+        
+            <li><a class="toctree-l3" href="#resetting-dashboards">Resetting Dashboards</a></li>
+        
+            <li><a class="toctree-l3" href="#changing-dashboard-representation">Changing Dashboard Representation</a></li>
+        
+            <li><a class="toctree-l3" href="#adjusting-dashboard-configuration">Adjusting Dashboard Configuration</a></li>
+        
+            <li><a class="toctree-l3" href="#setting-connection-prefereces">Setting Connection Prefereces</a></li>
+        
+            <li><a class="toctree-l3" href="#detaching-dashboards">Detaching Dashboards</a></li>
+        
+            <li><a class="toctree-l3" href="#changing-dashboard-view">Changing Dashboard View</a></li>
+        
+            <li><a class="toctree-l3" href="#copying-dashboards-to-clipboard">Copying Dashboards to Clipboard</a></li>
+        
+            <li><a class="toctree-l3" href="#saving-dashboards">Saving Dashboards</a></li>
+        
+            <li><a class="toctree-l3" href="#printing-dashboards">Printing Dashboards</a></li>
+        
+            <li><a class="toctree-l3" href="#zooming">Zooming</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#managing-dashboards">Managing Dashboards</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#creating-dashboards">Creating Dashboards</a></li>
+        
+            <li><a class="toctree-l3" href="#editing-dashboards">Editing Dashboards</a></li>
+        
+            <li><a class="toctree-l3" href="#deleting-dashboards">Deleting Dashboards</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Editor/">Data Editor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Filter/">Data Filter</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Filters/">Data Filters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Refresh/">Data Refresh</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Search/">Data Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-View-and-Format/">Data View and Format</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Viewing-and-Editing/">Data Viewing and Editing</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-migration/">Data migration</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-transfer/">Data transfer</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data/">Data</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-Connections/">Database Connections</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-Navigator/">Database Navigator</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-Object-Editor/">Database Object Editor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-Structure-Diagrams/">Database Structure Diagrams</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-drivers/">Database drivers</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../DebugPluginInstall/">DebugPluginInstall</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Develop-in-Eclipse/">Develop in Eclipse</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Develop-in-IDEA/">Develop in IDEA</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Disconnect-from-Database/">Disconnect from Database</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../ER-Diagrams/">ER Diagrams</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Eclipse-extensions/">Eclipse extensions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Edit-Connection/">Edit Connection</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Enterprise-Edition/">Enterprise Edition</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Extension-Office/">Extension Office</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Extension-SVG-Format/">Extension SVG Format</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Features-structure/">Features structure</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../File-Search/">File Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Filter-Database-Objects/">Filter Database Objects</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../GIS-examples/">GIS examples</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Home/">About DBeaver</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Installation/">Installation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Invalidate-and-Reconnect-to-Database/">Invalidate and Reconnect to Database</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../JDBC-Time-Zones/">JDBC Time Zones</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Localization/">Localization</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Log-files/">Log files</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Making-a-thread-dump/">Making a thread dump</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Managing-Charts/">Managing Charts</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Managing-Data-Formats/">Managing Data Formats</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Mock-Data-Generation-in-DBeaver/">Mock Data Generation in DBeaver</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Navigation/">Navigation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../New-Table-creation/">New Table creation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../NoSQL-MongoDB/">NoSQL MongoDB</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Optional-extensions/">Optional extensions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../PGDebugger/">Prerequisites for Debugging</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Panels/">Panels</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Pending-Transactions/">Pending Transactions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Posting-issues/">Posting issues</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Project-Explorer/">Project Explorer</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Projects-View/">Projects View</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Projects/">Projects</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Properties-Editor/">Properties Editor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Query-Manager/">Query Manager</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Reset-UI-settings/">Reset UI settings</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Reset-workspace/">Reset workspace</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Assist-and-Auto-Complete/">SQL Assist and Auto Complete</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Creation-and-Editing/">SQL Creation and Editing</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Editor/">SQL Editor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Execution/">SQL Execution</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Formatting/">SQL Formatting</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Generation/">SQL Generation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Templates/">SQL Templates</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Script-Management/">Script Management</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Search/">Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Shortcuts/">Shortcuts</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Transaction-Log/">Transaction Log</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../User-Guide/">User Guide</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Views/">Views</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Visual-Query-Builder/">Visual Query Builder</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Windows-Silent-Install/">Windows Silent Install</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Work-with-XML/">Work with XML</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Working-with-XML-and-JSON/">Working with XML and JSON</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Workspace-Overview/">Workspace Overview</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../_Footer/"> Footer</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../_Sidebar/"> Sidebar</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../_Toc/"> Toc</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../about/">About</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../sqleditor/">Sqleditor</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Dbeaver</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Dashboards</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p><strong>Dashboards</strong> tool allows DBAs and programmers to quickly identify performance, disk space issues, number of connections and other important KPIs associated with a single database connection. To learn more about database connections, see <a href="https://github.com/dbeaver/dbeaver/wiki/Database-Connections">Database Connections</a>. </p>
+<p>By default, DBeaver is delivered with a number of predefined sets of dashboards for such data bases as PostgreSQL, MySQL, Oracle and Exasol. Custom dashboards are also supported. To learn more about custom dashboards, see Managing Dashboards section below.</p>
+<h1 id="managing-dashboards-panel">Managing Dashboards Panel</h1>
+<p>Dashboards panel is a collection of real-time dashboards, that is dashboards that are continuously updated. 
+Dashboards displayed on the dashboards panel are actually a combination of continiously run SQL SELECT queries and charts continiously built on the data fetched.</p>
+<h2 id="opening-dashboard-panel">Opening Dashboard Panel</h2>
+<p>To open dashboards panel <strong>Open Dashboard</strong> button <img alt="" src="../images/ug/dashboards/Open_Dashboard_icon.png" /> in the main toolbar. The default configuration of the dashboards panel for the current database connection will appear. To learn more about database connections, see <a href="https://github.com/dbeaver/dbeaver/wiki/Database-Connections">Database Connections</a>.</p>
+<p>You can also right-click a connection name in the <strong>Database Navigator</strong> editor and select <strong>Open Dashboard</strong> menu option or use keyboard shortcut <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> and the dashboards panel will be opened. </p>
+<p><img alt="" src="../images/ug/dashboards/Open_Dashboard_Menu_Option.png" /></p>
+<p>The following controls are available in the dashboards panel toolbar:</p>
+<table>
+<thead>
+<tr>
+<th>Icon</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../images/ug/dashboards/Dashboard_Settings_icon.png" /></td>
+<td><strong>Settings</strong></td>
+<td>Allows managing dashboards' configuration.</td>
+</tr>
+<tr>
+<td><img alt="" src="../images/ug/dashboards/Dashboard_Add_icon.png" /></td>
+<td><strong>Add dashboard</strong></td>
+<td>Allows to add dashboards to the dashboard panel.</td>
+</tr>
+<tr>
+<td><img alt="" src="../images/ug/dashboards/Dashboard_Remove_icon.png" /></td>
+<td><strong>Remove dashboard</strong></td>
+<td>Allows to remove dashboards from the dashboard panel.</td>
+</tr>
+<tr>
+<td><img alt="" src="../images/ug/dashboards/Dashboard_Reset_icon.png" /></td>
+<td><strong>Reset dashboards</strong></td>
+<td>Allows to restart dashboard calculation.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="adding-dashboards">Adding Dashboards</h2>
+<p>To add a dashboard to the dashboards panel, press <strong>Add dashboard</strong> button <img alt="" src="../images/ug/dashboards/Dashboard_Add_icon.png" /> in the dashboards panel's toolbar, choose one of the dashboards from the list of available dashboards and press <strong>Add</strong> button. </p>
+<p><img alt="" src="../images/ug/dashboards/Adding_dashboard_By_Toolbar_Btn.png" /></p>
+<p><strong>Note:</strong> Different databases have different sets of predefined dashboards. DBeaver is delivered with sets of predefined dashboards for such databases as Postgress SQL, MySQL, Oracle, and Exasol. It is also possible to create new custom dashboards, for more details see Managing Dashboards.</p>
+<p>You can also add a dashboard by right-click in any place of the dashboards panel and then select the <strong>Add dashboard</strong> menu option.</p>
+<p><img alt="" src="../images/ug/dashboards/Adding_dashboard_By_Menu_Optn.png" /></p>
+<h2 id="removing-dashboards">Removing Dashboards</h2>
+<p>To remove a dashboard from the dashboards panel, click on the dashboard you want to remove and press button <strong>Remove dashboard</strong> <img alt="" src="../images/ug/dashboards/Dashboard_Remove_icon.png" /> in the dashboards panel toolbar or select <strong>Remove dashboard</strong> option in the dashboard's context menu.</p>
+<p><img alt="" src="../images/ug/dashboards/context_menu_Remove.png" /></p>
+<h2 id="resetting-dashboards">Resetting Dashboards</h2>
+<p>If you want to restart dashboard's calculation you can reset it.</p>
+<p>You can reset all the dashboards displayed in the dashboards panel by a single click on <strong>Reset dashboards</strong> <img alt="" src="../images/ug/dashboards/Dashboard_Reset_icon.png" /> button in the dashboard panel's toolbar.</p>
+<p>To reset a particular dashboard right-click on it and select <strong>Reset dashboards</strong> menu option or left click a dashboard and press <strong>Reset dashboards</strong> button in the dashboards panel's toolbar.</p>
+<p><img alt="" src="../images/ug/dashboards/context_menu_Reset.png" /></p>
+<h2 id="changing-dashboard-representation">Changing Dashboard Representation</h2>
+<p>To adjust dashboard representation settings right click on a dashboard and select the <strong>Settings</strong> menu option, then, in the opened dialog change the parameters you want. </p>
+<p><img alt="" src="../images/ug/dashboards/RepresentationSettings_DialogBox.png" /></p>
+<p>The following dashboard representation parameters can be adjusted:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Name</strong></td>
+<td>Defines a name of a dashboard.</td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>Defines dashboard's description. Use this field to make it easy to understand what kind of information the dashboard represents.</td>
+</tr>
+<tr>
+<td><strong>Update periods(ms)</strong></td>
+<td>Defines how often dashboard's rendering should be updated. The default value is 1000 ms.</td>
+</tr>
+<tr>
+<td><strong>Maximum items</strong></td>
+<td>Defines maximum number of fetched items. The default value is 300.</td>
+</tr>
+<tr>
+<td><strong>View</strong></td>
+<td>Defines visual representation of the dashboard. The following options are available: Bar, Pie, Time series.</td>
+</tr>
+<tr>
+<td><strong>Show legend</strong></td>
+<td>If this check-box is selected, the legend will be displayed on the dashboard.</td>
+</tr>
+<tr>
+<td><strong>Show grid</strong></td>
+<td>If this check-box is selected, the grid will be displayed on the dashboard.</td>
+</tr>
+<tr>
+<td><strong>Show domain axis</strong></td>
+<td>If this check-box is selected, the domain axis will be displayed on the dashboard.</td>
+</tr>
+<tr>
+<td><strong>Show range axis</strong></td>
+<td>If this check-box is selected, the range axis will be displayed on the dashboard.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="adjusting-dashboard-configuration">Adjusting Dashboard Configuration</h2>
+<p>To adjust dashboard's configuration settings right-click on a dashboard, select the <strong>Settings</strong> menu option, then, in the opened dialog box press the <strong>Configuration</strong> menu option. </p>
+<p><img alt="" src="../images/ug/dashboards/ConfigurationSettings_DialogBox.png" /></p>
+<p>The following dashboard parameters can be configured:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ID</strong></td>
+<td>Defines dashboard's ID. Make sure that ID has numeric values in it.</td>
+</tr>
+<tr>
+<td><strong>Name</strong></td>
+<td>Defines dasboard's name.</td>
+</tr>
+<tr>
+<td><strong>Database</strong></td>
+<td>Defines the database driver. To learn moe about database drivers, see <a href="https://github.com/dbeaver/dbeaver/wiki/Database-drivers">Database Drivers</a>.</td>
+</tr>
+<tr>
+<td><strong>Data type</strong></td>
+<td>Defines the data type. The following options are availabe: timerseries (the default option) and statistics. Select timeseries type if you want to track the actual value returned by the server. Select statistics type if your dashboard will show historical data.</td>
+</tr>
+<tr>
+<td><strong>Calc type</strong></td>
+<td>Defines how the data should be calculated. The following options are available: value (the default option) and delta. Select value if you're interested in the current value. Select delta if you want to track the difference between the current value and the previous one. This may be very useful when you work with statistics data, for example.</td>
+</tr>
+<tr>
+<td><strong>Value type</strong></td>
+<td>Defines the value to be shown on the range domain. The following options are available: decimal (the default option), integer, percent, bytes. Choose the value type in accordance with your data, for example, memory usage is convinient to be tracked in KBytes.</td>
+</tr>
+<tr>
+<td><strong>Interval</strong></td>
+<td>Defines time interval to be shown on the domain axis. The following time intervals are available: millicecond(the default option), second, minute, hour, day, week, month, year.</td>
+</tr>
+<tr>
+<td><strong>Fetch type</strong></td>
+<td>Defines whether the query should fetch data from rows or columns.</td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>Defines the description of a dashboard. Use this field to make it easy to understand what kind of information the dashboard represents.</td>
+</tr>
+<tr>
+<td><strong>Queries</strong></td>
+<td>Defines an SQL query whose fetched data will be used to build the chart displayed on the dashboard.</td>
+</tr>
+<tr>
+<td><strong>Default view</strong></td>
+<td>Defines the default visual representation of a dashboard on the dashboard panel. The following options are available: Bar, Pie, Time series(the default option).</td>
+</tr>
+<tr>
+<td><strong>Update period(ms)</strong></td>
+<td>Defines how often the dashboard's rendering should be updated.</td>
+</tr>
+<tr>
+<td><strong>Maximum items</strong></td>
+<td>Defines maximum number of items to be fetched for the dashboard.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> Predefined dashboards are read-only and cannot be re-configured, but you can copy them and use as templates to create new dashboards with any query and other settings. To learn about creating new dashboards, see Managing Dashboards section. </p>
+<h2 id="setting-connection-prefereces">Setting Connection Prefereces</h2>
+<p>By default, if there is no active connection to the database and you open its dashboards panel, all the dashboards on the panel will be empty.</p>
+<p>You can force database connection on the dashboard panel's activation by pressing <strong>Settings</strong> button <img alt="" src="../images/ug/dashboards/Dashboard_Settings_icon.png" /> on the dashboards panel's toolbar and then selecting the <strong>Connect on activation</strong> check-box.</p>
+<h2 id="detaching-dashboards">Detaching Dashboards</h2>
+<p>If you have several monitors and would like to place a dashboard into a separate screen, you can either detach the whole dashboards panel or a single dashboard and drag-and-drop them to any place you want.</p>
+<p>To detach the whole dashboard panel right click on the dashboard's tab name and select the <strong>Detach</strong>menu option.</p>
+<p><img alt="" src="../images/ug/dashboards/context_menu_Detach.png" /> </p>
+<p>To detach a single dashboard make a double left click over it. You can also right click the dashboard and then, select the <strong>View Dashboard</strong> menu option, the dashboard will be detached from the panel and you will be able to move it to any place of your screen.</p>
+<p><img alt="" src="../images/ug/dashboards/context_menu_View_dashboard.png" /> </p>
+<h2 id="changing-dashboard-view">Changing Dashboard View</h2>
+<p>You can change the representation of a dashboard and view it as a Pie, Bar or Time series. To change the view of a dashboard, right click on it and select <strong>View as</strong> menu option.</p>
+<p><img alt="" src="../images/ug/dashboards/context_menu_View_as.png" /> </p>
+<h2 id="copying-dashboards-to-clipboard">Copying Dashboards to Clipboard</h2>
+<p>To copy a dashboard into the clipboard, right click on the dashboard and use <strong>Copy to Clipboard</strong> menu option, the screenshot of the dashboard will be placed to the clipboard.</p>
+<p><img alt="" src="../images/ug/dashboards/context_menu_Copy_to_clipboard.png" /></p>
+<h2 id="saving-dashboards">Saving Dashboards</h2>
+<p>If you want to save a screenshot of a dashboard locally in PNG format, right click on it and select the <strong>Save as ...</strong> option in the context menu displayed. </p>
+<p><img alt="" src="../images/ug/dashboards/context_menu_Save_as.png" /></p>
+<h2 id="printing-dashboards">Printing Dashboards</h2>
+<p>If you want to print out a screenshot of a dashboard, right-click the dashboard to be printed and select the <strong>Print…</strong> option.</p>
+<p><img alt="" src="../images/ug/dashboards/context_menu_Print.png" /></p>
+<h2 id="zooming">Zooming</h2>
+<p>For Time series and Bar dashboard representations the following zooming options are available in the dashboard's context menu:</p>
+<ul>
+<li>Zoom In</li>
+<li>Zoom Out</li>
+<li>Zoom Reset</li>
+</ul>
+<p><img alt="" src="../images/ug/dashboards/context_menu_Zoom.png" /></p>
+<h1 id="managing-dashboards">Managing Dashboards</h1>
+<p>You can extend the list of predefined default dashboards by creating your own custom dashboards. This section describes dashboards' list management.</p>
+<h2 id="creating-dashboards">Creating Dashboards</h2>
+<p>You can create a new custom dashboard either from scratch or from any of already existing dashboards. </p>
+<h3 id="to-create-a-dashboard-from-scratch">To create a dashboard from scratch:</h3>
+<ol>
+<li>Press <strong>Settings</strong> button <img alt="" src="../images/ug/dashboards/Dashboard_Settings_icon.png" /> in the dashboards panel toolbar.</li>
+<li>In the opened dialog box click <strong>Manage...</strong> button.</li>
+<li>In the <strong>Manage dashboards</strong> window click <strong>New dashboard...</strong> button.</li>
+<li>Set up all configurational parameters as required and press <strong>OK</strong>. To learn more about dashboard's configuration parameters, see  <a href="https://github.com/dbeaver/dbeaver/wiki/Dashboards#adjusting-dashboard-configuration">Adjusting Dashboard Configuration</a>.</li>
+</ol>
+<p><img alt="" src="../images/ug/dashboards/New_dashboard_from_scratch.png" /></p>
+<h3 id="to-create-a-dashboard-from-template">To create a dashboard from template:</h3>
+<ol>
+<li>Press <strong>Settings</strong> button <img alt="" src="../images/ug/dashboards/Dashboard_Settings_icon.png" /> in the dashboards panel toolbar.</li>
+<li>In the opened dialog box click <strong>Manage...</strong> button.</li>
+<li>In the <strong>Manage dashboards</strong> window select any of the existing dashboards from the list and click <strong>Copy</strong>.</li>
+<li>Adjust all configurational parameters as required and press <strong>OK</strong>. To learn more about dashboard's configuration parameters, see  <a href="https://github.com/dbeaver/dbeaver/wiki/Dashboards#adjusting-dashboard-configuration">Adjusting Dashboard Configuration</a>.</li>
+</ol>
+<p><img alt="" src="../images/ug/dashboards/New_dashboard_from_template.png" /></p>
+<h2 id="editing-dashboards">Editing Dashboards</h2>
+<p>If you need to change dashboard's name , ID or any other configurational setting, you can edit a dashboard.</p>
+<p><strong>Note:</strong> Only custom dashboards can be edited, predefined dashboards are read-only, but you can use them as templates and create a custom dashboard whose parameters will be editable. To learn how to create dashboards from templates, see <a href="https://github.com/dbeaver/dbeaver/wiki/Dashboards#creating-dashboards">Creating Dashboards</a>.</p>
+<h3 id="to-edit-dashboards-configuration">To edit dashboard's configuration:</h3>
+<ol>
+<li>Press <strong>Settings</strong> button <img alt="" src="../images/ug/dashboards/Dashboard_Settings_icon.png" /> in the dashboards panel toolbar.</li>
+<li>In the opened dialog box click <strong>Manage...</strong> button.</li>
+<li>In the <strong>Manage dashboards</strong> window select any of the custom dashboards from the list and click <strong>Edit...</strong>.</li>
+<li>Adjust all configurational parameters as required and press <strong>OK</strong>. To learn more about dashboard's configuration parameters, see  <a href="https://github.com/dbeaver/dbeaver/wiki/Dashboards#adjusting-dashboard-configuration">Adjusting Dashboard Configuration</a>.</li>
+</ol>
+<p><img alt="" src="../images/ug/dashboards/Editting_dashboard.png" /></p>
+<h2 id="deleting-dashboards">Deleting Dashboards</h2>
+<p><strong>Note:</strong> Predefined dashboards cannot be deleted, but any of the custom dashboards can be deleted. </p>
+<p>If you want to delete a dashboard, follow the steps described below.</p>
+<h3 id="to-delete-a-dashboard">To delete a dashboard:</h3>
+<ol>
+<li>Press <strong>Settings</strong> button <img alt="" src="../images/ug/dashboards/Dashboard_Settings_icon.png" /> in the dashboards panel toolbar.</li>
+<li>In the opened dialog box click <strong>Manage...</strong> dashboards.</li>
+<li>In the <strong>Manage dashboards</strong> window select any of the custom dashboards from the list and click <strong>Delete</strong>.</li>
+</ol>
+<p><img alt="" src="../images/ug/dashboards/Deleting_dashboard.png" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Data-Editor/" class="btn btn-neutral float-right" title="Data Editor">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../DB-Metadata-Search/" class="btn btn-neutral" title="DB Metadata Search"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../DB-Metadata-Search/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Data-Editor/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

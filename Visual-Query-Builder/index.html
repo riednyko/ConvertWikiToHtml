@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Visual Query Builder - Dbeaver</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Visual Query Builder";
+    var mkdocs_page_input_path = "Visual-Query-Builder.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Dbeaver</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">About DBeaver</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../3rd-party-dependencies/">3rd party dependencies</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Admin-Manage-Connections/">Admin Manage Connections</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Admin-Manage-Drivers/">Admin Manage Drivers</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Apache-Hive/">Apache Hive</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Application-Window-Overview/">Application Window Overview</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Auto-Tests/">Auto Tests</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Auto-and-Manual-Commit-Modes/">Auto and Manual Commit Modes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Background-Tasks/">Background Tasks</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Bookmarks/">Bookmarks</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Build-from-sources/">Build from sources</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Cassandra/">Cassandra</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Clickhouse/">Clickhouse</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Client-Side-Scripting/">Client Side Scripting</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Command-Line/">Command line parameters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Configure-Filters/">Configure Filters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Connect-to-Database/">Connect to Database</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Connection-Types/">Connection Types</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Create-Connection/">Create Connection</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Custom-Diagrams/">Custom Diagrams</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../DB-Full-Text-Search/">DB Full Text Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../DB-Metadata-Search/">DB Metadata Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Dashboards/">Dashboards</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Editor/">Data Editor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Filter/">Data Filter</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Filters/">Data Filters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Refresh/">Data Refresh</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Search/">Data Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-View-and-Format/">Data View and Format</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Viewing-and-Editing/">Data Viewing and Editing</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-migration/">Data migration</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-transfer/">Data transfer</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data/">Data</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-Connections/">Database Connections</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-Navigator/">Database Navigator</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-Object-Editor/">Database Object Editor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-Structure-Diagrams/">Database Structure Diagrams</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-drivers/">Database drivers</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../DebugPluginInstall/">DebugPluginInstall</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Develop-in-Eclipse/">Develop in Eclipse</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Develop-in-IDEA/">Develop in IDEA</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Disconnect-from-Database/">Disconnect from Database</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../ER-Diagrams/">ER Diagrams</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Eclipse-extensions/">Eclipse extensions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Edit-Connection/">Edit Connection</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Enterprise-Edition/">Enterprise Edition</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Extension-Office/">Extension Office</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Extension-SVG-Format/">Extension SVG Format</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Features-structure/">Features structure</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../File-Search/">File Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Filter-Database-Objects/">Filter Database Objects</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../GIS-examples/">GIS examples</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Home/">About DBeaver</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Installation/">Installation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Invalidate-and-Reconnect-to-Database/">Invalidate and Reconnect to Database</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../JDBC-Time-Zones/">JDBC Time Zones</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Localization/">Localization</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Log-files/">Log files</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Making-a-thread-dump/">Making a thread dump</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Managing-Charts/">Managing Charts</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Managing-Data-Formats/">Managing Data Formats</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Mock-Data-Generation-in-DBeaver/">Mock Data Generation in DBeaver</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Navigation/">Navigation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../New-Table-creation/">New Table creation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../NoSQL-MongoDB/">NoSQL MongoDB</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Optional-extensions/">Optional extensions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../PGDebugger/">Prerequisites for Debugging</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Panels/">Panels</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Pending-Transactions/">Pending Transactions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Posting-issues/">Posting issues</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Project-Explorer/">Project Explorer</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Projects-View/">Projects View</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Projects/">Projects</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Properties-Editor/">Properties Editor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Query-Manager/">Query Manager</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Reset-UI-settings/">Reset UI settings</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Reset-workspace/">Reset workspace</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Assist-and-Auto-Complete/">SQL Assist and Auto Complete</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Creation-and-Editing/">SQL Creation and Editing</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Editor/">SQL Editor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Execution/">SQL Execution</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Formatting/">SQL Formatting</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Generation/">SQL Generation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Templates/">SQL Templates</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Script-Management/">Script Management</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Search/">Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Shortcuts/">Shortcuts</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Transaction-Log/">Transaction Log</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../User-Guide/">User Guide</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Views/">Views</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Visual Query Builder</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#opening-visual-query-builder">Opening Visual Query Builder</a></li>
+    
+
+    <li class="toctree-l2"><a href="#creating-visual-query">Creating Visual Query</a></li>
+    
+
+    <li class="toctree-l2"><a href="#adjusting-query-settings">Adjusting Query Settings</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#columns">Columns</a></li>
+        
+            <li><a class="toctree-l3" href="#conditions">Conditions</a></li>
+        
+            <li><a class="toctree-l3" href="#joins">Joins</a></li>
+        
+            <li><a class="toctree-l3" href="#sorting">Sorting</a></li>
+        
+            <li><a class="toctree-l3" href="#miscellaneous">Miscellaneous</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#executing-visual-query">Executing Visual Query</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Windows-Silent-Install/">Windows Silent Install</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Work-with-XML/">Work with XML</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Working-with-XML-and-JSON/">Working with XML and JSON</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Workspace-Overview/">Workspace Overview</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../_Footer/"> Footer</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../_Sidebar/"> Sidebar</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../_Toc/"> Toc</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../about/">About</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../sqleditor/">Sqleditor</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Dbeaver</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Visual Query Builder</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p><strong>Query Builder</strong> is a user-friendly visualization tool that will help you make sense of your complex database designs. It can be useful when you need to understand the various relationships between different tables. Also, it can be helpful for those who is not much familiar with SQL scripting or if you don't want to insert script commands manually. The tool creates SQL scripts automatically based on visual schema you create. </p>
+<p><em>Note: Visual Query Builder presents only in DBeaver [[Enterprise Edition]]</em></p>
+<h2 id="opening-visual-query-builder">Opening Visual Query Builder</h2>
+<p>To open <strong>Visual Query Builder</strong> click the <strong>Open Query Builder</strong> button <img alt="" src="../images/visual_query_builder/visual_query_builder_icon.png" /> in the <a href="https://github.com/dbeaver/dbeaver/wiki/SQL-Editor">SQL Editor</a> tool bar. The <strong>Visual Query Builder</strong> will appear on the right.</p>
+<p><img alt="" src="images/visual_query_builder/query_builder_window.png" /></p>
+<h2 id="creating-visual-query">Creating Visual Query</h2>
+<p>Start creating a query from selecting query data source: drag-and-drop tables you want to work with from the <strong>Database Navigator</strong> pane into the <strong>Visual Query Builder</strong> area. All the connections existing between the tables will be shown automatically.</p>
+<p><img alt="" src="../images/visual_query_builder/query_builder_tables0.png" /></p>
+<p>To create a new join between the tables press the left mouse button when the cursor is over the column of one table, holding the right mouse button pressed drag the cursor to the column of another table and release the right mouse button. The connection between the selected columns of the tables will be created visually and in the SQL script a new join will be added. </p>
+<p><img alt="" src="../images/visual_query_builder/query_builder_join_selected.png" /></p>
+<p>To remove a join between the tables click on it. The connection will be highlighted. Then, press<kbd>Delete</kbd> or use the <strong>Delete</strong> option in the context menu. The visual connection will be removed and the corresponding join will be automatically removed from the SQL script area.  </p>
+<p>To build a SELECT query you need to select columns in the tables you added. To select a column click the check-box next to its name - the column will be added to the <strong>Columns</strong> tab of the <strong>Query Settings Editor</strong> and SELECT query will be added to the SQL script area automatically.</p>
+<h2 id="adjusting-query-settings">Adjusting Query Settings</h2>
+<p><strong>Visual Query Builder</strong> also allows setting query conditions and adjust representation of query results by means of <strong>Query Settings Editor</strong>.</p>
+<p>To open <strong>Query Settings Editor</strong> use <strong>Visual builder query settings</strong> button <img alt="" src="../images/visual_query_builder/query_builder_settings_icon.png" /> in the vertical tool bar on the left.</p>
+<p><strong>Query Settings</strong> window contains five tabs described below.</p>
+<h3 id="columns">Columns</h3>
+<p><img alt="" src="../images/visual_query_builder/query_settings_columns.png" /></p>
+<p><strong>Columns</strong> tab of the <strong>Query Settings Editor</strong> contains all the columns you added by selecting column names in <strong>Visual Builder</strong> main window. In this tab you can add and remove columns using <strong>Add</strong> and <strong>Remove</strong> buttons correspondingly.</p>
+<p>To add a column, press <strong>Add</strong> button <img alt="" src="../images/visual_query_builder/query_builder_add_icon.png" /> and a new instance will be added to the table. Click on the first cell in <strong>Column or Expression</strong> column and select a column from the list of available columns displayed in the dropdown list appeared. </p>
+<p><img alt="" src="../images/visual_query_builder/query_settings_columns_dd.png" /></p>
+<p>To remove a column, click on the row containing its name and press the <strong>Remove</strong> button <img alt="" src="../images/visual_query_builder/query_builder_remove_icon.png" /> on the right.</p>
+<p>To change the display order of columns in the result table use <strong>Move Up/Down</strong> buttons <img alt="" src="../images/visual_query_builder/query_builder_move_icon.png" />.</p>
+<p>You can also define a user-friendly name of the column to be displayed in the result table. To set a user-friendly name click on a cell in <strong>Alias</strong> column and insert the name. The change will be immediately displayed in the SQL script area. </p>
+<p><img alt="" src="../images/visual_query_builder/query_settings_columns_al.png" /></p>
+<h3 id="conditions">Conditions</h3>
+<p><strong>Conditions</strong> tab is used for managing query conditional expressions.</p>
+<p><img alt="" src="../images/visual_query_builder/query_settings_conditions.png" /></p>
+<p>To add a new conditional expression use the <strong>Add</strong> button <img alt="" src="../images/visual_query_builder/query_builder_add_icon.png" /> on the right - a new instance will be added and the default conditional expression WHERE will be added to the SQL script area automatically. This default conditional expression can be then adjusted to the one you need:</p>
+<ul>
+<li><strong>Left Operand</strong> setting defines the left operand of the conditional expression. To set the left operand, click the cell in the <strong>Left Operand</strong> column and a drop down list of all available  columns will be displayed. Select a column you want to use as the left operand in your conditional expression or insert a digit. </li>
+</ul>
+<p><img alt="" src="../images/visual_query_builder/query_settings_conditions_lo.png" /></p>
+<ul>
+<li><strong>Operation</strong> setting defines the comparison rule between the left and the right operands of the conditional expression. To set a comparison rule, click the cell in the <strong>Operation</strong> column and select the rule you need from the drop down list appeared.</li>
+</ul>
+<p><img alt="" src="../images/visual_query_builder/query_settings_conditions_op.png" /></p>
+<ul>
+<li><strong>Right Operand</strong> setting defines the right operand of the conditional expression. To set the right operand, click the cell in the <strong>Right Operand</strong> column and a drop down list of all available columns will be displayed. Select a column you want to use as the left operand in your conditional expression or insert a digit. </li>
+</ul>
+<p><img alt="" src="../images/visual_query_builder/query_settings_conditions_ro.png" /></p>
+<p>To remove a conditional expression, click on the row containing the expression and press the <strong>Remove</strong> button <img alt="" src="../images/visual_query_builder/query_builder_remove_icon.png" /> on the right. </p>
+<h3 id="joins">Joins</h3>
+<p>All the joins existing between the tables in <strong>Visual Query Builder</strong> main window are displayed in the <strong>Joins</strong> tab of <strong>Query Settings Editor</strong>.</p>
+<p><img alt="" src="../images/visual_query_builder/query_settings_joins.png" /></p>
+<p>Joins cannot be  added or removed by means of <strong>Query Settings Editor</strong>, however, the following join settings can be adjusted here: </p>
+<ul>
+<li><strong>Type</strong> - defines the type of the join. Click the cell in the <strong>Type</strong> column - a drop down with available join types will be displayed. Select the required option  from the list by clicking on it.</li>
+</ul>
+<p><img alt="" src="../images/visual_query_builder/query_settings_joins_dd.png" /></p>
+<ul>
+<li><strong>Alias</strong> - defines a user friendly name of the join. To define this setting click on the cell in <strong>Alias</strong> column and input the name.</li>
+</ul>
+<p><img alt="" src="../images/visual_query_builder/query_settings_joins_al.png" /></p>
+<h3 id="sorting">Sorting</h3>
+<p>In <strong>Sorting</strong> tab you can set the order of rows in the result table.</p>
+<p><img alt="" src="../images/visual_query_builder/query_settings_sorting.png" /> </p>
+<p>To add a new sorting condition press  the <strong>Add</strong> button <img alt="" src="../images/visual_query_builder/query_builder_add_icon.png" /> on the right and the default conditional expression ORDER BY will be added to the SQL script area automatically. This default conditional expression can be then adjusted to the one you need:</p>
+<ul>
+<li>Once a new condition is added, click the first cell in <strong>Conditions or Expressions</strong> column and a drop down list of all available columns will appear. Select the required column by clicking on its name. </li>
+</ul>
+<p><img alt="" src="../images/visual_query_builder/query_settings_sorting_dd.png" /></p>
+<ul>
+<li>In <strong>Order</strong> column you can define whether the rows of the selected column should be sorted in ascending or descending order in the result table. To set the order, click the cell in <strong>Order</strong> column and select the required option from.The order by command will be added to the script. </li>
+</ul>
+<p><img alt="" src="../images/visual_query_builder/query_settings_sorting_or.png" /></p>
+<p>To remove a condition use the <strong>Remove</strong> button <img alt="" src="../images/visual_query_builder/query_builder_remove_icon.png" /> on the right. </p>
+<h3 id="miscellaneous">Miscellaneous</h3>
+<p>In <strong>Miscellaneous</strong> tab it is possible to autosave on SQL-editor switch by selecting the <strong>Autosave on SQL-editor switch</strong> check-box. </p>
+<p><img alt="" src="../images/visual_query_builder/query_settings_misc.png" /> </p>
+<h2 id="executing-visual-query">Executing Visual Query</h2>
+<p>To execute a query, use <strong>Execute SQL statement</strong> button <img alt="" src="../images/visual_query_builder/query_builder_run_icon.png" />  to get the results in the same tab or <strong>Execute SQL statement in new tab</strong> button <img alt="" src="../images/visual_query_builder/query_builder_run1_icon.png" /> to get the results in a new tab. Both buttons are located in the <strong>Visual Query Builder</strong> vertical toolbar.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Windows-Silent-Install/" class="btn btn-neutral float-right" title="Windows Silent Install">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Views/" class="btn btn-neutral" title="Views"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Views/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Windows-Silent-Install/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

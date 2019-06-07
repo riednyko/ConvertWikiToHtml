@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Data Editor - Dbeaver</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Data Editor";
+    var mkdocs_page_input_path = "Data-Editor.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Dbeaver</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">About DBeaver</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../3rd-party-dependencies/">3rd party dependencies</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Admin-Manage-Connections/">Admin Manage Connections</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Admin-Manage-Drivers/">Admin Manage Drivers</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Apache-Hive/">Apache Hive</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Application-Window-Overview/">Application Window Overview</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Auto-Tests/">Auto Tests</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Auto-and-Manual-Commit-Modes/">Auto and Manual Commit Modes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Background-Tasks/">Background Tasks</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Bookmarks/">Bookmarks</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Build-from-sources/">Build from sources</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Cassandra/">Cassandra</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Clickhouse/">Clickhouse</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Client-Side-Scripting/">Client Side Scripting</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Command-Line/">Command line parameters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Configure-Filters/">Configure Filters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Connect-to-Database/">Connect to Database</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Connection-Types/">Connection Types</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Create-Connection/">Create Connection</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Custom-Diagrams/">Custom Diagrams</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../DB-Full-Text-Search/">DB Full Text Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../DB-Metadata-Search/">DB Metadata Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Dashboards/">Dashboards</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Data Editor</a>
+    <ul class="subnav">
+            
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Filter/">Data Filter</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Filters/">Data Filters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Refresh/">Data Refresh</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Search/">Data Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-View-and-Format/">Data View and Format</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-Viewing-and-Editing/">Data Viewing and Editing</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-migration/">Data migration</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data-transfer/">Data transfer</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data/">Data</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-Connections/">Database Connections</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-Navigator/">Database Navigator</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-Object-Editor/">Database Object Editor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-Structure-Diagrams/">Database Structure Diagrams</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Database-drivers/">Database drivers</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../DebugPluginInstall/">DebugPluginInstall</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Develop-in-Eclipse/">Develop in Eclipse</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Develop-in-IDEA/">Develop in IDEA</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Disconnect-from-Database/">Disconnect from Database</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../ER-Diagrams/">ER Diagrams</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Eclipse-extensions/">Eclipse extensions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Edit-Connection/">Edit Connection</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Enterprise-Edition/">Enterprise Edition</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Extension-Office/">Extension Office</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Extension-SVG-Format/">Extension SVG Format</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Features-structure/">Features structure</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../File-Search/">File Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Filter-Database-Objects/">Filter Database Objects</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../GIS-examples/">GIS examples</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Home/">About DBeaver</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Installation/">Installation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Invalidate-and-Reconnect-to-Database/">Invalidate and Reconnect to Database</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../JDBC-Time-Zones/">JDBC Time Zones</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Localization/">Localization</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Log-files/">Log files</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Making-a-thread-dump/">Making a thread dump</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Managing-Charts/">Managing Charts</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Managing-Data-Formats/">Managing Data Formats</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Mock-Data-Generation-in-DBeaver/">Mock Data Generation in DBeaver</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Navigation/">Navigation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../New-Table-creation/">New Table creation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../NoSQL-MongoDB/">NoSQL MongoDB</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Optional-extensions/">Optional extensions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../PGDebugger/">Prerequisites for Debugging</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Panels/">Panels</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Pending-Transactions/">Pending Transactions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Posting-issues/">Posting issues</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Project-Explorer/">Project Explorer</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Projects-View/">Projects View</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Projects/">Projects</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Properties-Editor/">Properties Editor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Query-Manager/">Query Manager</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Reset-UI-settings/">Reset UI settings</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Reset-workspace/">Reset workspace</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Assist-and-Auto-Complete/">SQL Assist and Auto Complete</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Creation-and-Editing/">SQL Creation and Editing</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Editor/">SQL Editor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Execution/">SQL Execution</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Formatting/">SQL Formatting</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Generation/">SQL Generation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SQL-Templates/">SQL Templates</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Script-Management/">Script Management</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Search/">Search</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Shortcuts/">Shortcuts</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Transaction-Log/">Transaction Log</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../User-Guide/">User Guide</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Views/">Views</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Visual-Query-Builder/">Visual Query Builder</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Windows-Silent-Install/">Windows Silent Install</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Work-with-XML/">Work with XML</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Working-with-XML-and-JSON/">Working with XML and JSON</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Workspace-Overview/">Workspace Overview</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../_Footer/"> Footer</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../_Sidebar/"> Sidebar</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../_Toc/"> Toc</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../about/">About</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../sqleditor/">Sqleditor</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Dbeaver</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Data Editor</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>The Data editor appears:
+* As the <strong>Data</strong> tab of the <a href="https://github.com/dbeaver/dbeaver/wiki/Database-Object-Editor">Database Object Editor</a> available only for tables and views.
+* As the <strong>Results</strong> tab when you run a custom SQL query in <a href="https://github.com/dbeaver/dbeaver/wiki/SQL-Editor">SQL Editor</a></p>
+<p>The Data editor allows viewing and editing the data of a database table or view.
+The central part of the Data editor is the data table. The editor also provides two toolbars and a filter field:</p>
+<p><img alt="" src="../images/ug/Data-Editor-with-markup.png" /></p>
+<p>To learn how many rows the data table contains, click the <strong>Calculate total row count</strong> button in the bottom toolbar. The number of rows appears in a status field next to the button: <img alt="" src="../images/ug/Calculate-rows-button.png" /></p>
+<p>To learn about ways to navigate data in the data table, see <a href="https://github.com/dbeaver/dbeaver/wiki/Navigation">Navigation</a> article.</p>
+<p>The top toolbar contains the following buttons:</p>
+<table>
+<thead>
+<tr>
+<th>Button</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../images/ug/Apply-filter-criteria-button.png" /></td>
+<td><strong>Apply filter criteria</strong></td>
+<td>Applies filter criteria entered in the filter field above the data table, see <a href="https://github.com/dbeaver/dbeaver/wiki/Data-Filters">Data Filters</a> article for more information</td>
+</tr>
+<tr>
+<td><img alt="" src="../images/ug/Remove-all-filters-orderings.png" /></td>
+<td><strong>Remove all filters/orderings</strong></td>
+<td>Removes all filters and orderings applied to the data</td>
+</tr>
+<tr>
+<td><img alt="" src="../images/ug/Save-filter-settings-for-current-object.png" /></td>
+<td><strong>Save filter settings for current object</strong></td>
+<td>Saves the current filter settings for the database object to apply next time when you reopen it in the editor, see details in <a href="https://github.com/dbeaver/dbeaver/wiki/Data-Filters">Data Filters</a> article</td>
+</tr>
+<tr>
+<td><img alt="" src="../images/ug/Filter-button.png" /></td>
+<td><strong>Custom Filters</strong></td>
+<td>Opens the Result Set Order/Filter Settings window, see <a href="https://github.com/dbeaver/dbeaver/wiki/Data-Appearance">Data Appearance</a> article for more information</td>
+</tr>
+<tr>
+<td><img alt="" src="../images/ug/Configure-auto-refresh.png" /></td>
+<td><strong>Configure auto-refresh</strong></td>
+<td>Allows configuring data auto-refresh settings, see <a href="https://github.com/dbeaver/dbeaver/wiki/Data-Refresh">Data Refresh</a> article for details</td>
+</tr>
+<tr>
+<td><img alt="" src="../images/ug/History-navigation.png" /></td>
+<td>Forward and backward -  history navigation buttons</td>
+<td>Navigate forward and backward in the Data Editor history, see <em>History</em> section of <a href="https://github.com/dbeaver/dbeaver/wiki/Navigation">Navigation</a> article for more information. The buttons are equivalent to pressing the key combinations: <kbd>Alt+Left</kbd> (backward) and <kbd>Alt+right</kbd> (forward).</td>
+</tr>
+</tbody>
+</table>
+<p>The side bar contains the following tabs:</p>
+<table>
+<thead>
+<tr>
+<th>Button</th>
+<th>Name</th>
+<th>Description Chart_button</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../images/ug/Grid-button.png" /></td>
+<td><strong>Grid</strong></td>
+<td>Switches to grid view of data</td>
+</tr>
+<tr>
+<td><img alt="" src="../images/ug/Text-button.png" /></td>
+<td><strong>Text</strong></td>
+<td>Switches to plain text view of data</td>
+</tr>
+<tr>
+<td><img alt="" src="../images/ug/Chart_button.png" /></td>
+<td><strong>Chart</strong></td>
+<td>Switches to chart view. For more details on charts, see <a href="https://github.com/dbeaver/dbeaver/wiki/Managing-Charts">Managing Charts</a> article.</td>
+</tr>
+<tr>
+<td><img alt="" src="../images/ug/Record-button.png" /></td>
+<td><strong>Record</strong></td>
+<td>- Same as pressing <kbd>Tab</kbd><br/>- Switches the positions of rows and columns so that columns appear as rows, and rows hide in one <strong>Value</strong> column, see details in the <em>Table vs. Record Views</em> section of <a href="https://github.com/dbeaver/dbeaver/wiki/Data-Appearance">Data Appearance</a> article.</td>
+</tr>
+</tbody>
+</table>
+<p>The bottom toolbar provides the following buttons:</p>
+<table>
+<thead>
+<tr>
+<th>Button</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../images/ug/Save-button-Data-Editor.png" /></td>
+<td><strong>Save</strong></td>
+<td>Saves all unsaved changes to the data such as adding, duplicating, deleting rows, inline editing of values, see <a href="https://github.com/dbeaver/dbeaver/wiki/Data-Viewing-and-Editing">Data Viewing and Editing</a> article for information</td>
+</tr>
+<tr>
+<td><img alt="" src="../images/ug/Cancel-button-Data-Editor.png" /></td>
+<td><strong>Cancel</strong></td>
+<td>Discards all unsaved changes to the data</td>
+</tr>
+<tr>
+<td><img alt="" src="../images/ug/Script-button.png" /></td>
+<td><strong>Script</strong></td>
+<td>Opens the Preview Changes window in which you can see changes that you have made to the data, see details in <a href="https://github.com/dbeaver/dbeaver/wiki/Data-Viewing-and-Editing">Data Viewing and Editing</a> article</td>
+</tr>
+<tr>
+<td><img alt="" src="../images/ug/Edit-cell-value-button.png" /></td>
+<td><strong>Edit cell value in separate dialog/editor</strong></td>
+<td>Opens the cell in focus for editing in a separate editor or dialog box, see details in <em>Cell Editor</em> section of <a href="https://github.com/dbeaver/dbeaver/wiki/Data-Viewing-and-Editing">Data Viewing and Editing</a> article</td>
+</tr>
+<tr>
+<td><img alt="" src="../images/ug/Add-new-row-button.png" /></td>
+<td><strong>Add new row</strong></td>
+<td>Adds a new empty row below the current row, see details in <em>Adding, Copying and Deleting Rows</em> section of <a href="https://github.com/dbeaver/dbeaver/wiki/Data-Viewing-and-Editing">Data Viewing and Editing</a> article</td>
+</tr>
+<tr>
+<td><img alt="" src="../images/ug/Duplicate-current-row-button.png" /></td>
+<td><strong>Duplicate current row</strong></td>
+<td>Copies the current rows and pastes the copy below the current row, see details in <em>Adding, Copying and Deleting Rows</em> section of <a href="https://github.com/dbeaver/dbeaver/wiki/Data-Viewing-and-Editing">Data Viewing and Editing</a> article</td>
+</tr>
+<tr>
+<td><img alt="" src="../images/ug/Delete-current-row-button.png" /></td>
+<td><strong>Delete current row</strong></td>
+<td>Colors the rows in focus in red to mark them for deletion, see details in <em>Adding, Copying and Deleting Rows</em> section of <a href="https://github.com/dbeaver/dbeaver/wiki/Data-Viewing-and-Editing">Data Viewing and Editing</a> article</td>
+</tr>
+<tr>
+<td><img alt="" src="../images/ug/Move-to-first-row-button.png" /></td>
+<td><strong>Move to first row</strong></td>
+<td>Moves the focus (highlighting) from the current to the first row of the table</td>
+</tr>
+<tr>
+<td><img alt="" src="../images/ug/Move-to-previous-row-button.png" /></td>
+<td><strong>Move to previous row</strong></td>
+<td>Moves the focus (highlighting) from the current to the previous row of the table</td>
+</tr>
+<tr>
+<td><img alt="" src="../images/ug/Move-to-next-row-button.png" /></td>
+<td><strong>Move to next row</strong></td>
+<td>Moves the focus (highlighting) from the current to the next row of the table</td>
+</tr>
+<tr>
+<td><img alt="" src="../images/ug/Move-to-last-row-button.png" /></td>
+<td><strong>Move to last row</strong></td>
+<td>Moves the focus (highlighting) from the current to the last row of the table</td>
+</tr>
+<tr>
+<td><img alt="" src="../images/ug/Fetch-next-page-button.png" /></td>
+<td><strong>Fetch next page of results</strong></td>
+<td>Fetches the next portion of data (next N rows) making it ready for display, see <em>Scrolling Results Page</em> section of <a href="https://github.com/dbeaver/dbeaver/wiki/Navigation">Navigation</a> article for more information</td>
+</tr>
+<tr>
+<td><img alt="" src="../images/ug/Fetch-all-rows-button.png" /></td>
+<td><strong>Fetch all rows</strong></td>
+<td>Fetches the whole result set making it ready for display, see <em>Scrolling Results Page</em> section of <a href="https://github.com/dbeaver/dbeaver/wiki/Navigation">Navigation</a> article for more information</td>
+</tr>
+<tr>
+<td><img alt="" src="../images/ug/Panels-button.png" /></td>
+<td><strong>Panels</strong></td>
+<td>Opens panels on the right side of the Data Editor, see <a href="https://github.com/dbeaver/dbeaver/wiki/Panels">Panels</a> for information</td>
+</tr>
+<tr>
+<td><img alt="" src="../images/ug/Configure-columns-visibility-icon.png" /></td>
+<td><strong>Configure</strong></td>
+<td>Opens a dropdown menu with settings</td>
+</tr>
+<tr>
+<td><img alt="" src="../images/ug/json-button.png" /></td>
+<td><strong>JSON</strong></td>
+<td>- Available in EE version only for MongoDB documents and JSON tables<br/>- Switches to JSON view of data</td>
+</tr>
+<tr>
+<td><img alt="" src="../images/ug/xml-button.png" /></td>
+<td><strong>XML</strong></td>
+<td>- Available in EE version only for XML tables<br/>- Switches to XML view of data</td>
+</tr>
+<tr>
+<td><img alt="" src="../images/ug/Mock-data-button.png" /></td>
+<td><strong>Generate Mock Data</strong></td>
+<td>Opens the Mock Data Generator window, see TBD for details</td>
+</tr>
+<tr>
+<td><img alt="" src="../images/ug/Row-count-details-button.png" /></td>
+<td>Rows count details</td>
+<td>Opens the Status details dialog box showing the timing details of fetching table rows</td>
+</tr>
+<tr>
+<td><img alt="" src="../images/ug/Calculate-total-rows-button.png" /></td>
+<td><strong>Calculate total row count</strong></td>
+<td>Calculates the total number of rows in the table</td>
+</tr>
+</tbody>
+</table>
+<p>Every cell in the data table has a context menu – right-click the cell to open the menu. The context menu provides the following items:</p>
+<table>
+<thead>
+<tr>
+<th>Menu Item</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cut</strong></td>
+<td>Cuts the content of the current cell or column to the clipboard</td>
+</tr>
+<tr>
+<td><strong>Copy</strong></td>
+<td>Copies the content of the current cell or column to the clipboard</td>
+</tr>
+<tr>
+<td><strong>Advanced Copy</strong></td>
+<td>Opens advanced copy submenu that allows copying data with preset formatting parameters</td>
+</tr>
+<tr>
+<td><strong>Paste</strong></td>
+<td>Pastes the copied content to the cells in focus</td>
+</tr>
+<tr>
+<td><strong>Advanced Paste</strong></td>
+<td>Pastes several values delimited with a tabulation or line break</td>
+</tr>
+<tr>
+<td><strong>Delete</strong></td>
+<td>Deletes the row that has the cell in focus<br/> NOTE: In fact, when users click <strong>Delete</strong>, the system only highlights the row red while the actual deletion happens when users click <strong>Save</strong>.</td>
+</tr>
+<tr>
+<td><strong>Edit cell</strong></td>
+<td>- For CLOB/BLOB data format, opens the contents of the cell in a new tab<br/> - For all formats except CLOB/BLOB, opens a properties window for the cell<br/></td>
+</tr>
+<tr>
+<td><strong>Inline edit</strong></td>
+<td>- Same as double-click on a cell<br/>- Makes the cell editable</td>
+</tr>
+<tr>
+<td><strong>Set to NULL</strong></td>
+<td>Sets the value of selected cells to NULL</td>
+</tr>
+<tr>
+<td><strong>Hide column</strong></td>
+<td>Hides the column currently in focus, see the Managing Display of Columns in Data Table section further in this article</td>
+</tr>
+<tr>
+<td><strong>Save to file…</strong></td>
+<td>- Appears only for columns with BLOB/CLOB data<br/>- Opens the standard Save As window that allows saving data contained in the cell to a file</td>
+</tr>
+<tr>
+<td><strong>Load from file…</strong></td>
+<td>- Appears only for columns with BLOB/CLOB data<br/>- Opens a standard window for opening files</td>
+</tr>
+<tr>
+<td><strong>Order/Filter</strong></td>
+<td>Displays a submenu that allows selecting filter criteria for the data. The submenu contains the most common filters that can be applied to the cell in focus – see details in <a href="https://github.com/dbeaver/dbeaver/wiki/Data-Filters">Data Filters article</a>.<br/> By default, DBeaver filters data by sending a request to the server (the Server-side results ordering checkbox selected). To filter data on the client side using DBeaver`s internal algorithm, clear the checkbox.</td>
+</tr>
+<tr>
+<td><strong>View/Format</strong></td>
+<td>Opens a submenu that provides tools for formatting and modifying the view of data, see <a href="https://github.com/dbeaver/dbeaver/wiki/Data-View-and-Format">Data View and Format</a></td>
+</tr>
+<tr>
+<td><strong>Navigate</strong></td>
+<td>Opens a submenu that helps users navigate throughout the data table, see <a href="https://github.com/dbeaver/dbeaver/wiki/Navigation">Navigation</a></td>
+</tr>
+<tr>
+<td><strong>Layout</strong></td>
+<td>Changes the layout of data, see the <em>Table vs. Record Views</em> section of the <a href="https://github.com/dbeaver/dbeaver/wiki/Data-View-and-Format">Data View and Format</a> article</td>
+</tr>
+<tr>
+<td><strong>Export Resultset</strong></td>
+<td>Opens the Data Transfer wizard that guides you through the steps to select a format and export data<br/>NOTE: The system exports the whole result set including records that are not visible in the screen and preserves all applied data filters and ordering.</td>
+</tr>
+<tr>
+<td><strong>Generate SQL</strong></td>
+<td>Opens a submenu on which you can select the type of SQL query to generate</td>
+</tr>
+<tr>
+<td><strong>Refresh</strong></td>
+<td>Refreshes the whole results set including all items that are not visible in the screen</td>
+</tr>
+</tbody>
+</table>
+<p>For more information about using the Data Editor, please see the subsections of this article - open them via the contents tree on the right.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Data-Filter/" class="btn btn-neutral float-right" title="Data Filter">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Dashboards/" class="btn btn-neutral" title="Dashboards"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Dashboards/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Data-Filter/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
